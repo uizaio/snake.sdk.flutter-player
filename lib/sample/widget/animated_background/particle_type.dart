@@ -1,4 +1,0 @@
-enum ParticleType {
-  Shape,
-  Image,
-}
