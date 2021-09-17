@@ -43,12 +43,6 @@ class MenuScreen extends StatelessWidget {
             },
           ),
           UIUtils.getButton(
-            "More app",
-            () {
-              UrlLauncherUtils.moreApp();
-            },
-          ),
-          UIUtils.getButton(
             "Policy",
             () {
               UrlLauncherUtils.launchInWebViewWithJavaScript(
