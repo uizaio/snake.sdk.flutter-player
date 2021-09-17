@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:video_player/video_player.dart';
 
-import '../controls_overlay.dart';
+import 'controls_overlay.dart';
 
 class ButterFlyAssetVideo extends StatefulWidget {
   @override
