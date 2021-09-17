@@ -32,7 +32,7 @@ dependencies:
   url_launcher: ^6.0.3 #https://pub.dev/packages/url_launcher
   logger: ^1.0.0 #https://pub.dev/packages/logger
   get: ^4.1.4 #https://pub.dev/packages/get
-  rxdart: ^0.27.1 #https://pub.dev/packages/rxdart
+  #rxdart: ^0.27.1 #https://pub.dev/packages/rxdart
   video_player: ^2.1.5 #https://pub.dev/packages/video_player
   in_app_review: ^2.0.2 #https://pub.dev/packages/in_app_review
   #package_info_plus: ^1.0.2 #https://pub.dev/packages/package_info_plus
