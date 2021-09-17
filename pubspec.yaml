@@ -36,8 +36,8 @@ dependencies:
   video_player: ^2.1.5 #https://pub.dev/packages/video_player
   in_app_review: ^2.0.2 #https://pub.dev/packages/in_app_review
   package_info_plus: ^1.0.2 #https://pub.dev/packages/package_info_plus
-  path_provider: ^2.0.3 #https://pub.dev/packages/path_provider
-  http: ^0.13.3 #https://pub.dev/packages/http
+  #path_provider: ^2.0.3 #https://pub.dev/packages/path_provider
+  #http: ^0.13.3 #https://pub.dev/packages/http
 
 dev_dependencies:
   flutter_test:
