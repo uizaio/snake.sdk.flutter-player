@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:hello_word/lib/common/const/video_constants.dart';
+import 'package:hello_word/lib/util/uI_utils.dart';
 import 'package:hello_word/lib/util/video_utils.dart';
 import 'package:video_player/video_player.dart';
 
@@ -17,14 +19,13 @@ class _RemoteVideoScreenState extends State<RemoteVideoScreen> {
   void initState() {
     super.initState();
 
-    _setupVideo();
+    _playMp4();
   }
 
-  void _setupVideo() {
+  void _setupVideo(String link, String closedCaptionFile) {
     _controller = VideoPlayerController.network(
-      'https://flutter.github.io/assets-for-api-docs/assets/videos/bee.mp4',
-      closedCaptionFile: SnakeUtils.loadCaptions(
-          context, 'assets/videos/bumble_bee_captions.srt'),
+      link,
+      closedCaptionFile: SnakeUtils.loadCaptions(context, closedCaptionFile),
       videoPlayerOptions: VideoPlayerOptions(mixWithOthers: true),
     );
 
@@ -39,6 +40,11 @@ class _RemoteVideoScreenState extends State<RemoteVideoScreen> {
   void dispose() {
     _controller?.dispose();
     super.dispose();
+  }
+
+  void _playMp4() {
+    _setupVideo(
+        VideoConstants.videoMp4, 'assets/videos/bumble_bee_captions.srt');
   }
 
   @override
@@ -60,6 +66,9 @@ class _RemoteVideoScreenState extends State<RemoteVideoScreen> {
         children: [
           _buildVideoView(),
           SizedBox(height: 50),
+          UIUtils.getButton("Mp4", () {
+            _playMp4();
+          }),
         ],
       ),
     );
