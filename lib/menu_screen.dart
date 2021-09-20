@@ -1,12 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:get/get.dart';
 import 'package:hello_word/lib/common/const/dimen_constants.dart';
 import 'package:hello_word/lib/util/url_launcher_utils.dart';
-import 'package:hello_word/sample/video_player/remote_video.dart';
-import 'package:hello_word/sample/video_player/butter_fly_asset_video.dart';
-import 'package:hello_word/sample/video_player/butter_fly_asset_video_in_list.dart';
-import 'package:hello_word/sample/video_player/player_video_and_pop_page.dart';
 
 import 'lib/util/uI_utils.dart';
 
@@ -31,28 +26,8 @@ class MenuScreen extends StatelessWidget {
         padding: EdgeInsets.all(DimenConstants.marginPaddingMedium),
         children: [
           UIUtils.getButton(
-            "RemoteVideo",
-            () {
-              Get.to(RemoteVideoScreen());
-            },
-          ),
-          UIUtils.getButton(
-            "ButterFlyAssetVideo",
-            () {
-              Get.to(ButterFlyAssetVideo());
-            },
-          ),
-          UIUtils.getButton(
-            "ButterFlyAssetVideoInList",
-            () {
-              Get.to(ButterFlyAssetVideoInList());
-            },
-          ),
-          UIUtils.getButton(
-            "PlayerVideoAndPopPage",
-            () {
-              Get.to(PlayerVideoAndPopPage());
-            },
+            "Demo Video",
+            () {},
           ),
           SizedBox(height: 100),
           UIUtils.getButton(
