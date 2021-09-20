@@ -59,6 +59,7 @@ class _BumbleBeeRemoteVideoState extends State<BumbleBeeRemoteVideo> {
       body: ListView(
         children: [
           _buildVideoView(),
+          SizedBox(height: 50),
         ],
       ),
     );
