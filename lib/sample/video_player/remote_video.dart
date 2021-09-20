@@ -19,7 +19,7 @@ class _RemoteVideoScreenState extends State<RemoteVideoScreen> {
   void initState() {
     super.initState();
 
-    _playMp4Landscape2();
+    // _playMp4Landscape();
   }
 
   void _setupVideo(String link, String? closedCaptionFile) {
@@ -61,7 +61,7 @@ class _RemoteVideoScreenState extends State<RemoteVideoScreen> {
   }
 
   void _playMp4Portrait() {
-    _setupVideo(VideoConstants.videoMp4Landscape, null);
+    _setupVideo(VideoConstants.videoMp4Portrait1, null);
   }
 
   @override
@@ -88,6 +88,9 @@ class _RemoteVideoScreenState extends State<RemoteVideoScreen> {
           }),
           UIUtils.getButton("Mp4 Landscape 2", () {
             _playMp4Landscape2();
+          }),
+          UIUtils.getButton("Mp4 Portrait", () {
+            _playMp4Portrait();
           }),
         ],
       ),
