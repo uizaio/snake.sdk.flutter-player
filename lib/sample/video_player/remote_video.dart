@@ -5,12 +5,12 @@ import 'package:video_player/video_player.dart';
 
 import 'controls_overlay.dart';
 
-class BumbleBeeRemoteVideo extends StatefulWidget {
+class RemoteVideoScreen extends StatefulWidget {
   @override
-  _BumbleBeeRemoteVideoState createState() => _BumbleBeeRemoteVideoState();
+  _RemoteVideoScreenState createState() => _RemoteVideoScreenState();
 }
 
-class _BumbleBeeRemoteVideoState extends State<BumbleBeeRemoteVideo> {
+class _RemoteVideoScreenState extends State<RemoteVideoScreen> {
   VideoPlayerController? _controller;
 
   @override
@@ -45,7 +45,7 @@ class _BumbleBeeRemoteVideoState extends State<BumbleBeeRemoteVideo> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('With remote mp4'),
+        title: Text('RemoteVideoScreen'),
         leading: IconButton(
           icon: Icon(
             Icons.arrow_back,

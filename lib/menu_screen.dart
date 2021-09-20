@@ -3,7 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:hello_word/lib/common/const/dimen_constants.dart';
 import 'package:hello_word/lib/util/url_launcher_utils.dart';
-import 'package:hello_word/sample/video_player/bumble_bee_remote_video.dart';
+import 'package:hello_word/sample/video_player/remote_video.dart';
 import 'package:hello_word/sample/video_player/butter_fly_asset_video.dart';
 import 'package:hello_word/sample/video_player/butter_fly_asset_video_in_list.dart';
 import 'package:hello_word/sample/video_player/player_video_and_pop_page.dart';
@@ -31,9 +31,9 @@ class MenuScreen extends StatelessWidget {
         padding: EdgeInsets.all(DimenConstants.marginPaddingMedium),
         children: [
           UIUtils.getButton(
-            "BumbleBeeRemoteVideo",
+            "RemoteVideo",
             () {
-              Get.to(BumbleBeeRemoteVideo());
+              Get.to(RemoteVideoScreen());
             },
           ),
           UIUtils.getButton(
