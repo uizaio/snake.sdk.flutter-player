@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:hello_word/lib/util/uI_utils.dart';
 import 'package:hello_word/lib/util/video_utils.dart';
 import 'package:video_player/video_player.dart';
 
@@ -45,9 +44,18 @@ class _BumbleBeeRemoteVideoState extends State<BumbleBeeRemoteVideo> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: UIUtils.getAppBar("With remote mp4", () {
-        Get.back();
-      }, null),
+      appBar: AppBar(
+        title: Text('With remote mp4'),
+        leading: IconButton(
+          icon: Icon(
+            Icons.arrow_back,
+            color: Colors.white,
+          ),
+          onPressed: () {
+            Get.back();
+          },
+        ),
+      ),
       body: ListView(
         children: [
           _buildVideoView(),

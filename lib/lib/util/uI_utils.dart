@@ -1,49 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:hello_word/lib/common/const/dimen_constants.dart';
 
 class UIUtils {
-  static AppBar getAppBar(
-    String text,
-    VoidCallback? onPressed,
-    VoidCallback? onPressCodeViewer,
-  ) {
-    Widget _buildActionCodeWidget() {
-      if (onPressCodeViewer == null) {
-        return Container();
-      } else {
-        return IconButton(
-          icon: Icon(
-            Icons.code,
-            color: Colors.white,
-          ),
-          onPressed: onPressCodeViewer,
-        );
-      }
-    }
-
-    return AppBar(
-      title: Text(text),
-      centerTitle: false,
-      leading: IconButton(
-        icon: Icon(
-          Icons.arrow_back,
-          color: Colors.white,
-        ),
-        onPressed: onPressed,
-      ),
-
-      //add action on appbar
-      actions: <Widget>[
-        _buildActionCodeWidget(),
-      ],
-      backgroundColor: Colors.blue,
-      systemOverlayStyle: SystemUiOverlayStyle.light,
-    );
-  }
-
   static ElevatedButton getButton(
     String text,
     VoidCallback? onPressed,
