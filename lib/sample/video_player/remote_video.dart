@@ -19,15 +19,24 @@ class _RemoteVideoScreenState extends State<RemoteVideoScreen> {
   void initState() {
     super.initState();
 
-    _playMp4();
+    _playMp4Landscape2();
   }
 
-  void _setupVideo(String link, String closedCaptionFile) {
-    _controller = VideoPlayerController.network(
-      link,
-      closedCaptionFile: SnakeUtils.loadCaptions(context, closedCaptionFile),
-      videoPlayerOptions: VideoPlayerOptions(mixWithOthers: true),
-    );
+  void _setupVideo(String link, String? closedCaptionFile) {
+    var _videoPlayerOptions = VideoPlayerOptions(mixWithOthers: true);
+
+    if (closedCaptionFile == null || closedCaptionFile.isEmpty) {
+      _controller = VideoPlayerController.network(
+        link,
+        videoPlayerOptions: _videoPlayerOptions,
+      );
+    } else {
+      _controller = VideoPlayerController.network(
+        link,
+        closedCaptionFile: SnakeUtils.loadCaptions(context, closedCaptionFile),
+        videoPlayerOptions: _videoPlayerOptions,
+      );
+    }
 
     _controller?.addListener(() {
       setState(() {});
@@ -42,9 +51,17 @@ class _RemoteVideoScreenState extends State<RemoteVideoScreen> {
     super.dispose();
   }
 
-  void _playMp4() {
-    _setupVideo(
-        VideoConstants.videoMp4, 'assets/videos/bumble_bee_captions.srt');
+  void _playMp4Landscape() {
+    _setupVideo(VideoConstants.videoMp4Landscape,
+        'assets/videos/bumble_bee_captions.srt');
+  }
+
+  void _playMp4Landscape2() {
+    _setupVideo(VideoConstants.videoMp4Landscape2, null);
+  }
+
+  void _playMp4Portrait() {
+    _setupVideo(VideoConstants.videoMp4Landscape, null);
   }
 
   @override
@@ -66,8 +83,11 @@ class _RemoteVideoScreenState extends State<RemoteVideoScreen> {
         children: [
           _buildVideoView(),
           SizedBox(height: 50),
-          UIUtils.getButton("Mp4", () {
-            _playMp4();
+          UIUtils.getButton("Mp4 Landscape", () {
+            _playMp4Landscape();
+          }),
+          UIUtils.getButton("Mp4 Landscape 2", () {
+            _playMp4Landscape2();
           }),
         ],
       ),
