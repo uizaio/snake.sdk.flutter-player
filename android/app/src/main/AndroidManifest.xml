@@ -69,7 +69,7 @@
 
     <application
         android:name="io.flutter.app.FlutterApplication"
-        android:label="Flutter Demo"
+        android:label="SnakePlayer"
         android:usesCleartextTraffic="true"
         android:requestLegacyExternalStorage="true"
         android:icon="@mipmap/launcher_icon">

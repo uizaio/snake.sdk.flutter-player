@@ -37,7 +37,7 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.loitp.baseflutter"
+        applicationId "snake.sdk.flutter_player"
 
         // Required by the Flutter WebView plugin: https://pub.dev/packages/webview_flutter
         minSdkVersion 19
