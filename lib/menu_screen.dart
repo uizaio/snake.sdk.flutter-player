@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:get/get.dart';
 import 'package:hello_word/lib/common/const/dimen_constants.dart';
 import 'package:hello_word/lib/util/url_launcher_utils.dart';
+import 'package:hello_word/sample/basic_player_page.dart';
 
-import 'lib/util/uI_utils.dart';
+import 'lib/util/ui_utils.dart';
 
 class MenuScreen extends StatelessWidget {
   @override
@@ -26,8 +28,10 @@ class MenuScreen extends StatelessWidget {
         padding: EdgeInsets.all(DimenConstants.marginPaddingMedium),
         children: [
           UIUtils.getButton(
-            "Demo Video",
-            () {},
+            "BasicPlayerPage",
+            () {
+              Get.to(BasicPlayerPage());
+            },
           ),
           SizedBox(height: 100),
           UIUtils.getButton(
