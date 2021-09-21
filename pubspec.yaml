@@ -26,9 +26,9 @@ dependencies:
 
   cupertino_icons: ^1.0.3
 
-  connectivity_plus: ^1.0.2 #https://pub.dev/packages/connectivity_plus
-  event_bus: ^2.0.0 #https://pub.dev/packages/event_bus
-  focus_detector: ^2.0.0 #https://pub.dev/packages/focus_detector
+  #connectivity_plus: ^1.0.2 #https://pub.dev/packages/connectivity_plus
+  #event_bus: ^2.0.0 #https://pub.dev/packages/event_bus
+  #focus_detector: ^2.0.0 #https://pub.dev/packages/focus_detector
   url_launcher: ^6.0.3 #https://pub.dev/packages/url_launcher
   logger: ^1.0.0 #https://pub.dev/packages/logger
   get: ^4.1.4 #https://pub.dev/packages/get
