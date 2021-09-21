@@ -38,8 +38,7 @@ dependencies:
   #path_provider: ^2.0.3 #https://pub.dev/packages/path_provider
   #http: ^0.13.3 #https://pub.dev/packages/http
 
-  video_player: ^2.2.4 #https://pub.dev/packages/video_player
-  chewie: ^1.2.2 #https://pub.dev/packages/chewie
+  better_player: ^0.0.74 #https://pub.dev/packages/better_player
 
 dev_dependencies:
   flutter_test:
