@@ -6,6 +6,17 @@ import 'package:get/get.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:snake_player_flutter/snake_player_flutter.dart';
 import 'package:snake_player_flutter_example/sample/basic_player_page.dart';
+import 'package:snake_player_flutter_example/sample/cache_page.dart';
+import 'package:snake_player_flutter_example/sample/controls_configuration_page.dart';
+import 'package:snake_player_flutter_example/sample/event_listener_page.dart';
+import 'package:snake_player_flutter_example/sample/hls_audio_page.dart';
+import 'package:snake_player_flutter_example/sample/hls_subtitles_page.dart';
+import 'package:snake_player_flutter_example/sample/hls_tracks_page.dart';
+import 'package:snake_player_flutter_example/sample/normal_player_page.dart';
+import 'package:snake_player_flutter_example/sample/playlist_page.dart';
+import 'package:snake_player_flutter_example/sample/resolutions_page.dart';
+import 'package:snake_player_flutter_example/sample/subtitles_page.dart';
+import 'package:snake_player_flutter_example/sample/video_list/video_list_page.dart';
 
 import 'common/constant/video_constants.dart';
 import 'common/util/ui_utils.dart';
@@ -86,6 +97,72 @@ class _MenuScreenState extends State<MenuScreen> {
             "BasicPlayerPage",
             () {
               Get.to(const BasicPlayerPage());
+            },
+          ),
+          UIUtils.getButton(
+            "NormalPlayerPage",
+                () {
+              Get.to(const NormalPlayerPage());
+            },
+          ),
+          UIUtils.getButton(
+            "ControlsConfigurationPage",
+                () {
+              Get.to(const ControlsConfigurationPage());
+            },
+          ),
+          UIUtils.getButton(
+            "EventListenerPage",
+                () {
+              Get.to(const EventListenerPage());
+            },
+          ),
+          UIUtils.getButton(
+            "SubtitlesPage",
+                () {
+              Get.to(const SubtitlesPage());
+            },
+          ),
+          UIUtils.getButton(
+            "ResolutionsPage",
+                () {
+              Get.to(const ResolutionsPage());
+            },
+          ),
+          UIUtils.getButton(
+            "HlsSubtitlesPage",
+                () {
+              Get.to(const HlsSubtitlesPage());
+            },
+          ),
+          UIUtils.getButton(
+            "HlsTracksPage",
+                () {
+              Get.to(const HlsTracksPage());
+            },
+          ),
+          UIUtils.getButton(
+            "HlsAudioPage",
+                () {
+              Get.to(const HlsAudioPage());
+            },
+          ),
+          UIUtils.getButton(
+            "CachePage",
+                () {
+              Get.to(const CachePage());
+            },
+          ),
+          UIUtils.getButton(
+            "PlaylistPage",
+                () {
+              Get.to(const PlaylistPage());
+            },
+          ),
+          UIUtils.getButton(
+            "VideoListPage",
+                () {
+              Get.to(const VideoListPage());
             },
           ),
           const SizedBox(height: 100),
