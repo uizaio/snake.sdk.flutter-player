@@ -9,6 +9,7 @@ import 'package:snake_player_flutter_example/sample/basic_player_page.dart';
 import 'package:snake_player_flutter_example/sample/controls_configuration_page.dart';
 import 'package:snake_player_flutter_example/sample/event_listener_page.dart';
 import 'package:snake_player_flutter_example/sample/normal_player_page.dart';
+import 'package:snake_player_flutter_example/sample/resolutions_page.dart';
 import 'package:snake_player_flutter_example/sample/subtitles_page.dart';
 
 import 'common/constant/video_constants.dart';
@@ -114,6 +115,12 @@ class _MenuScreenState extends State<MenuScreen> {
             "SubtitlesPage",
                 () {
               Get.to(const SubtitlesPage());
+            },
+          ),
+          UIUtils.getButton(
+            "ResolutionsPage",
+                () {
+              Get.to(const ResolutionsPage());
             },
           ),
           const SizedBox(height: 100),
