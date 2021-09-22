@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:hello_word/lib/common/const/dimen_constants.dart';
-import 'package:hello_word/lib/util/uI_utils.dart';
+import 'package:hello_word/lib/util/ui_utils.dart';
 
 abstract class BaseStatefulState<T extends StatefulWidget> extends State<T> {
   BaseStatefulState();
