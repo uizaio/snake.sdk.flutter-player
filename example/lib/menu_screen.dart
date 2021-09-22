@@ -13,6 +13,7 @@ import 'package:snake_player_flutter_example/sample/hls_audio_page.dart';
 import 'package:snake_player_flutter_example/sample/hls_subtitles_page.dart';
 import 'package:snake_player_flutter_example/sample/hls_tracks_page.dart';
 import 'package:snake_player_flutter_example/sample/normal_player_page.dart';
+import 'package:snake_player_flutter_example/sample/playlist_page.dart';
 import 'package:snake_player_flutter_example/sample/resolutions_page.dart';
 import 'package:snake_player_flutter_example/sample/subtitles_page.dart';
 
@@ -149,6 +150,12 @@ class _MenuScreenState extends State<MenuScreen> {
             "CachePage",
                 () {
               Get.to(const CachePage());
+            },
+          ),
+          UIUtils.getButton(
+            "PlaylistPage",
+                () {
+              Get.to(const PlaylistPage());
             },
           ),
           const SizedBox(height: 100),

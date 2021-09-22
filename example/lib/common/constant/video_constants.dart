@@ -35,4 +35,10 @@ class VideoConstants {
       "http://cdn.theoplayer.com/video/elephants-dream/playlist.m3u8";
   static const String phantomVideoUrl =
       "http://sample.vodobox.com/skate_phantom_flex_4k/skate_phantom_flex_4k.m3u8";
+  static String catImageUrl =
+      "https://img.webmd.com/dtmcms/live/webmd/consumer_assets/site_images/article_thumbnails/other/cat_relaxing_on_patio_other/1800x1200_cat_relaxing_on_patio_other.jpg";
+  static const String bugBuckBunnyVideoUrl =
+      "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4";
+  static const String forBiggerJoyridesVideoUrl =
+      "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4";
 }
