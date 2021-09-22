@@ -31,4 +31,6 @@ class VideoConstants {
       "https://bitdash-a.akamaihd.net/content/sintel/hls/playlist.m3u8";
   static const String hlsTestStreamUrl =
       "https://mtoczko.github.io/hls-test-streams/test-group/playlist.m3u8";
+  static String elephantDreamStreamUrl =
+      "http://cdn.theoplayer.com/video/elephants-dream/playlist.m3u8";
 }
