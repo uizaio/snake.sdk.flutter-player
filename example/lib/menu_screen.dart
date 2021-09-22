@@ -7,8 +7,9 @@ import 'package:path_provider/path_provider.dart';
 import 'package:snake_player_flutter/snake_player_flutter.dart';
 import 'package:snake_player_flutter_example/sample/basic_player_page.dart';
 
-import 'lib/util/ui_utils.dart';
-import 'lib/util/url_launcher_utils.dart';
+import 'common/constant/video_constants.dart';
+import 'common/util/ui_utils.dart';
+import 'common/util/url_launcher_utils.dart';
 
 class MenuScreen extends StatefulWidget {
   const MenuScreen({Key? key}) : super(key: key);

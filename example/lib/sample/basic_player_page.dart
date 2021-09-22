@@ -1,7 +1,7 @@
 import 'package:better_player/better_player.dart';
 import 'package:flutter/material.dart';
-import 'package:snake_player_flutter/snake_player_flutter.dart';
-import 'package:snake_player_flutter_example/lib/util/file_utils.dart';
+import 'package:snake_player_flutter_example/common/constant/video_constants.dart';
+import 'package:snake_player_flutter_example/common/util/file_utils.dart';
 
 class BasicPlayerPage extends StatefulWidget {
   const BasicPlayerPage({Key? key}) : super(key: key);
