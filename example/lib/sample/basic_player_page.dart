@@ -19,10 +19,6 @@ class _BasicPlayerPageState extends State<BasicPlayerPage> {
       ),
       body: Column(
         children: [
-          Image.asset(
-            "assets/ic_launcher.png",
-            height: 20,
-          ),
           const SizedBox(height: 8),
           const Padding(
             padding: EdgeInsets.symmetric(horizontal: 16),
