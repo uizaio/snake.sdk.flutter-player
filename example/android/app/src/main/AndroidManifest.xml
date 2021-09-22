@@ -1,6 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.uiza.snake_player_flutter_example">
    <application
+       android:usesCleartextTraffic="true"
         android:label="snake_player_flutter_example"
         android:icon="@mipmap/ic_launcher">
         <activity
@@ -28,5 +29,11 @@
         <meta-data
             android:name="flutterEmbedding"
             android:value="2" />
+       <service
+           android:name=".BetterPlayerService"
+           android:stopWithTask="false" />
     </application>
+
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.INTERNET" />
 </manifest>

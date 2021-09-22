@@ -1,7 +1,7 @@
 name: snake_player_flutter_example
 description: Demonstrates how to use the snake_player_flutter plugin.
 
-publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+publish_to: 'none'
 
 environment:
   sdk: ">=2.12.0 <3.0.0"
@@ -23,7 +23,7 @@ dependencies:
   #rxdart: ^0.27.1 #https://pub.dev/packages/rxdart
   in_app_review: ^2.0.2 #https://pub.dev/packages/in_app_review
   #package_info_plus: ^1.0.2 #https://pub.dev/packages/package_info_plus
-  path_provider: ^2.0.2 #https://pub.dev/packages/path_provider
+  #path_provider: ^2.0.2 #https://pub.dev/packages/path_provider
   #http: ^0.13.3 #https://pub.dev/packages/http
 
 dev_dependencies:
@@ -34,9 +34,7 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
-
   assets:
     - assets/
-  #    - assets/videos/
-  #    - assets/images/
-
+#    - assets/videos/
+#    - assets/images/

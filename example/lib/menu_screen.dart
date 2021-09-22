@@ -1,20 +1,70 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
+import 'package:path_provider/path_provider.dart';
 import 'package:snake_player_flutter/snake_player_flutter.dart';
 import 'package:snake_player_flutter_example/sample/basic_player_page.dart';
 
 import 'lib/util/ui_utils.dart';
 import 'lib/util/url_launcher_utils.dart';
 
-class MenuScreen extends StatelessWidget {
+class MenuScreen extends StatefulWidget {
   const MenuScreen({Key? key}) : super(key: key);
+
+  @override
+  _MenuScreenState createState() => _MenuScreenState();
+}
+
+class _MenuScreenState extends State<MenuScreen> {
+  @override
+  void initState() {
+    _saveAssetSubtitleToFile();
+    _saveAssetVideoToFile();
+    _saveAssetEncryptVideoToFile();
+    _saveLogoToFile();
+    super.initState();
+  }
+
+  ///Save subtitles to file, so we can use it later
+  Future _saveAssetSubtitleToFile() async {
+    String content =
+        await rootBundle.loadString("assets/example_subtitles.srt");
+    final directory = await getApplicationDocumentsDirectory();
+    var file = File("${directory.path}/example_subtitles.srt");
+    file.writeAsString(content);
+  }
+
+  ///Save video to file, so we can use it later
+  Future _saveAssetVideoToFile() async {
+    var content = await rootBundle.load("assets/testvideo.mp4");
+    final directory = await getApplicationDocumentsDirectory();
+    var file = File("${directory.path}/testvideo.mp4");
+    file.writeAsBytesSync(content.buffer.asUint8List());
+  }
+
+  Future _saveAssetEncryptVideoToFile() async {
+    var content =
+        await rootBundle.load("assets/${VideoConstants.fileTestVideoEncryptUrl}");
+    final directory = await getApplicationDocumentsDirectory();
+    var file = File("${directory.path}/${VideoConstants.fileTestVideoEncryptUrl}");
+    file.writeAsBytesSync(content.buffer.asUint8List());
+  }
+
+  ///Save logo to file, so we can use it later
+  Future _saveLogoToFile() async {
+    var content = await rootBundle.load("assets/${VideoConstants.logo}");
+    final directory = await getApplicationDocumentsDirectory();
+    var file = File("${directory.path}/${VideoConstants.logo}");
+    file.writeAsBytesSync(content.buffer.asUint8List());
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Main menu'),
+        title: const Text('MenuScreen'),
         leading: IconButton(
           icon: const Icon(
             Icons.arrow_back,
