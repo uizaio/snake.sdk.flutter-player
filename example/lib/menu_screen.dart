@@ -16,6 +16,7 @@ import 'package:snake_player_flutter_example/sample/normal_player_page.dart';
 import 'package:snake_player_flutter_example/sample/playlist_page.dart';
 import 'package:snake_player_flutter_example/sample/resolutions_page.dart';
 import 'package:snake_player_flutter_example/sample/subtitles_page.dart';
+import 'package:snake_player_flutter_example/sample/video_list/video_list_page.dart';
 
 import 'common/constant/video_constants.dart';
 import 'common/util/ui_utils.dart';
@@ -156,6 +157,12 @@ class _MenuScreenState extends State<MenuScreen> {
             "PlaylistPage",
                 () {
               Get.to(const PlaylistPage());
+            },
+          ),
+          UIUtils.getButton(
+            "VideoListPage",
+                () {
+              Get.to(const VideoListPage());
             },
           ),
           const SizedBox(height: 100),
