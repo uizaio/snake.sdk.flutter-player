@@ -6,6 +6,7 @@ import 'package:get/get.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:snake_player_flutter/snake_player_flutter.dart';
 import 'package:snake_player_flutter_example/sample/basic_player_page.dart';
+import 'package:snake_player_flutter_example/sample/controls_configuration_page.dart';
 import 'package:snake_player_flutter_example/sample/normal_player_page.dart';
 
 import 'common/constant/video_constants.dart';
@@ -93,6 +94,12 @@ class _MenuScreenState extends State<MenuScreen> {
             "NormalPlayerPage",
                 () {
               Get.to(const NormalPlayerPage());
+            },
+          ),
+          UIUtils.getButton(
+            "ControlsConfigurationPage",
+                () {
+              Get.to(const ControlsConfigurationPage());
             },
           ),
           const SizedBox(height: 100),

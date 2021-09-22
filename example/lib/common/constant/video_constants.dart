@@ -13,4 +13,7 @@ class VideoConstants {
   static const String fileTestVideoUrl = "testvideo.mp4";
   static const String fileTestVideoEncryptUrl = "testvideo_encrypt.mp4";
   static String logo = "logo.png";
+
+  static const String elephantDreamVideoUrl =
+      "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4";
 }
