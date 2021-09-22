@@ -1,42 +1,30 @@
 import 'package:flutter/material.dart';
-import 'package:snake_player_flutter/snake_player_flutter.dart';
+import 'package:flutter/services.dart';
+import 'package:get/get.dart';
 
-void main() {
-  runApp(const MyApp());
-}
+import 'menu_screen.dart';
 
-class MyApp extends StatefulWidget {
-  const MyApp({Key? key}) : super(key: key);
+void main() async {
+  SystemChrome.setSystemUIOverlayStyle(
+    SystemUiOverlayStyle(
+      systemNavigationBarColor: Colors.blue, // navigation bar color
+      systemNavigationBarIconBrightness:
+      Brightness.light, //navigation bar icons' color
+    ),
+  );
+  // needed if you intend to initialize in the `main` function
+  WidgetsFlutterBinding.ensureInitialized();
 
-  @override
-  State<MyApp> createState() => _MyAppState();
-}
-
-class _MyAppState extends State<MyApp> {
-  @override
-  void initState() {
-    super.initState();
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Snake Player'),
-        ),
-        body: Column(
-          children: [
-            const Text('Running on'),
-            SampleButton(
-              text: "Sample Button",
-              onPressed: () {
-                print("Sample Button Click");
-              },
-            ),
-          ],
-        ),
+  runApp(
+    GetMaterialApp(
+      enableLog: true,
+      debugShowCheckedModeBanner: true,
+      defaultTransition: Transition.cupertino,
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+        backgroundColor: Colors.white,
       ),
-    );
-  }
+      home: MenuScreen(),
+    ),
+  );
 }
