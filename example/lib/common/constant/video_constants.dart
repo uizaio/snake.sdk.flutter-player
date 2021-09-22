@@ -27,4 +27,6 @@ class VideoConstants {
     "EXTRA_LARGE":
         "https://file-examples-com.github.io/uploads/2017/04/file_example_MP4_1920_18MG.mp4"
   };
+  static const String hlsPlaylistUrl =
+      "https://bitdash-a.akamaihd.net/content/sintel/hls/playlist.m3u8";
 }
