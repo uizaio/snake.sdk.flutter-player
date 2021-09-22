@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:snake_player_flutter_example/lib/common/const/dimen_constants.dart';
+import 'package:snake_player_flutter/snake_player_flutter.dart';
 import 'package:snake_player_flutter_example/lib/util/ui_utils.dart';
 
 abstract class BaseStatefulState<T extends StatefulWidget> extends State<T> {
@@ -25,8 +25,8 @@ abstract class BaseStatefulState<T extends StatefulWidget> extends State<T> {
           child: Center(
             child: Container(
               width: Get.width,
-              margin: EdgeInsets.all(DimenConstants.marginPaddingMedium),
-              padding: EdgeInsets.fromLTRB(
+              margin: const EdgeInsets.all(DimenConstants.marginPaddingMedium),
+              padding: const EdgeInsets.fromLTRB(
                 DimenConstants.marginPaddingMedium,
                 DimenConstants.marginPaddingMedium,
                 DimenConstants.marginPaddingMedium,
@@ -42,16 +42,16 @@ abstract class BaseStatefulState<T extends StatefulWidget> extends State<T> {
                   Text(
                     title,
                     textAlign: TextAlign.center,
-                    style: TextStyle(
+                    style: const TextStyle(
                       fontSize: 16,
                       fontWeight: FontWeight.w700,
                       color: Color(0xff232426),
                       decoration: TextDecoration.none,
                     ),
                   ),
-                  SizedBox(height: DimenConstants.marginPaddingMedium),
+                  const SizedBox(height: DimenConstants.marginPaddingMedium),
                   widgetMessage,
-                  SizedBox(height: 28),
+                  const SizedBox(height: 28),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
@@ -61,7 +61,7 @@ abstract class BaseStatefulState<T extends StatefulWidget> extends State<T> {
                             ? (Expanded(
                                 child: TextButton(
                                   style: TextButton.styleFrom(
-                                    padding: EdgeInsets.fromLTRB(
+                                    padding: const EdgeInsets.fromLTRB(
                                       DimenConstants.marginPaddingMedium,
                                       DimenConstants.marginPaddingMedium *
                                           2 /
@@ -71,9 +71,9 @@ abstract class BaseStatefulState<T extends StatefulWidget> extends State<T> {
                                           2 /
                                           3,
                                     ),
-                                    primary: Color(0xff0A79F8),
-                                    backgroundColor: Color(0xffffffff),
-                                    textStyle: TextStyle(
+                                    primary: const Color(0xff0A79F8),
+                                    backgroundColor: const Color(0xffffffff),
+                                    textStyle: const TextStyle(
                                       fontSize: 14,
                                       fontWeight: FontWeight.w500,
                                     ),
@@ -95,15 +95,15 @@ abstract class BaseStatefulState<T extends StatefulWidget> extends State<T> {
                               ))
                             : (TextButton(
                                 style: TextButton.styleFrom(
-                                  padding: EdgeInsets.fromLTRB(
+                                  padding: const EdgeInsets.fromLTRB(
                                     DimenConstants.marginPaddingMedium,
                                     DimenConstants.marginPaddingMedium * 2 / 3,
                                     DimenConstants.marginPaddingMedium,
                                     DimenConstants.marginPaddingMedium * 2 / 3,
                                   ),
-                                  primary: Color(0xff0A79F8),
-                                  backgroundColor: Color(0xffffffff),
-                                  textStyle: TextStyle(
+                                  primary: const Color(0xff0A79F8),
+                                  backgroundColor: const Color(0xffffffff),
+                                  textStyle: const TextStyle(
                                     fontSize: 14,
                                     fontWeight: FontWeight.w500,
                                   ),
@@ -125,23 +125,23 @@ abstract class BaseStatefulState<T extends StatefulWidget> extends State<T> {
                       ),
                       Visibility(
                         visible: okTitle.isNotEmpty == true,
-                        child:
-                            SizedBox(width: DimenConstants.marginPaddingSmall),
+                        child: const SizedBox(
+                            width: DimenConstants.marginPaddingSmall),
                       ),
                       Visibility(
                         visible: okTitle.isNotEmpty == true,
                         child: Expanded(
                           child: TextButton(
                             style: TextButton.styleFrom(
-                              padding: EdgeInsets.fromLTRB(
+                              padding: const EdgeInsets.fromLTRB(
                                 DimenConstants.marginPaddingMedium,
                                 DimenConstants.marginPaddingMedium * 2 / 3,
                                 DimenConstants.marginPaddingMedium,
                                 DimenConstants.marginPaddingMedium * 2 / 3,
                               ),
-                              primary: Color(0xffffffff),
-                              backgroundColor: Color(0xff2B67F6),
-                              textStyle: TextStyle(
+                              primary: const Color(0xffffffff),
+                              backgroundColor: const Color(0xff2B67F6),
+                              textStyle: const TextStyle(
                                 fontSize: 14,
                                 fontWeight: FontWeight.w500,
                               ),
@@ -170,7 +170,7 @@ abstract class BaseStatefulState<T extends StatefulWidget> extends State<T> {
           ),
         );
       },
-      transitionDuration: Duration(milliseconds: 500),
+      transitionDuration: const Duration(milliseconds: 500),
       transitionBuilder: (_, anim, __, child) {
         return ScaleTransition(
           scale: CurvedAnimation(
@@ -202,8 +202,8 @@ abstract class BaseStatefulState<T extends StatefulWidget> extends State<T> {
           child: Center(
             child: Container(
               width: Get.width,
-              margin: EdgeInsets.all(DimenConstants.marginPaddingMedium),
-              padding: EdgeInsets.fromLTRB(
+              margin: const EdgeInsets.all(DimenConstants.marginPaddingMedium),
+              padding: const EdgeInsets.fromLTRB(
                 DimenConstants.marginPaddingMedium,
                 DimenConstants.marginPaddingMedium,
                 DimenConstants.marginPaddingMedium,
@@ -219,25 +219,25 @@ abstract class BaseStatefulState<T extends StatefulWidget> extends State<T> {
                   Text(
                     title,
                     textAlign: TextAlign.center,
-                    style: TextStyle(
+                    style: const TextStyle(
                       fontSize: 16,
                       fontWeight: FontWeight.w700,
                       color: Color(0xff232426),
                       decoration: TextDecoration.none,
                     ),
                   ),
-                  SizedBox(height: DimenConstants.marginPaddingMedium),
+                  const SizedBox(height: DimenConstants.marginPaddingMedium),
                   Text(
                     message,
                     textAlign: TextAlign.center,
-                    style: TextStyle(
+                    style: const TextStyle(
                       fontSize: 14,
                       fontWeight: FontWeight.w400,
-                      color: Color(0xff232426),
+                      color: const Color(0xff232426),
                       decoration: TextDecoration.none,
                     ),
                   ),
-                  SizedBox(height: 28),
+                  const SizedBox(height: 28),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
@@ -248,7 +248,7 @@ abstract class BaseStatefulState<T extends StatefulWidget> extends State<T> {
                             ? (Expanded(
                                 child: TextButton(
                                   style: TextButton.styleFrom(
-                                    padding: EdgeInsets.fromLTRB(
+                                    padding: const EdgeInsets.fromLTRB(
                                       DimenConstants.marginPaddingMedium,
                                       DimenConstants.marginPaddingMedium *
                                           2 /
@@ -258,9 +258,9 @@ abstract class BaseStatefulState<T extends StatefulWidget> extends State<T> {
                                           2 /
                                           3,
                                     ),
-                                    primary: Color(0xff0A79F8),
-                                    backgroundColor: Color(0xffffffff),
-                                    textStyle: TextStyle(
+                                    primary: const Color(0xff0A79F8),
+                                    backgroundColor: const Color(0xffffffff),
+                                    textStyle: const TextStyle(
                                       fontSize: 14,
                                       fontWeight: FontWeight.w500,
                                     ),
@@ -282,15 +282,15 @@ abstract class BaseStatefulState<T extends StatefulWidget> extends State<T> {
                               ))
                             : (TextButton(
                                 style: TextButton.styleFrom(
-                                  padding: EdgeInsets.fromLTRB(
+                                  padding: const EdgeInsets.fromLTRB(
                                     DimenConstants.marginPaddingMedium,
                                     DimenConstants.marginPaddingMedium * 2 / 3,
                                     DimenConstants.marginPaddingMedium,
                                     DimenConstants.marginPaddingMedium * 2 / 3,
                                   ),
-                                  primary: Color(0xff0A79F8),
-                                  backgroundColor: Color(0xffffffff),
-                                  textStyle: TextStyle(
+                                  primary: const Color(0xff0A79F8),
+                                  backgroundColor: const Color(0xffffffff),
+                                  textStyle: const TextStyle(
                                     fontSize: 14,
                                     fontWeight: FontWeight.w500,
                                   ),
@@ -312,23 +312,23 @@ abstract class BaseStatefulState<T extends StatefulWidget> extends State<T> {
                       ),
                       Visibility(
                         visible: okTitle != null && okTitle.isNotEmpty == true,
-                        child:
-                            SizedBox(width: DimenConstants.marginPaddingSmall),
+                        child: const SizedBox(
+                            width: DimenConstants.marginPaddingSmall),
                       ),
                       Visibility(
                         visible: okTitle != null && okTitle.isNotEmpty == true,
                         child: Expanded(
                           child: TextButton(
                             style: TextButton.styleFrom(
-                              padding: EdgeInsets.fromLTRB(
+                              padding: const EdgeInsets.fromLTRB(
                                 DimenConstants.marginPaddingMedium,
                                 DimenConstants.marginPaddingMedium * 2 / 3,
                                 DimenConstants.marginPaddingMedium,
                                 DimenConstants.marginPaddingMedium * 2 / 3,
                               ),
-                              primary: Color(0xffffffff),
-                              backgroundColor: Color(0xff2B67F6),
-                              textStyle: TextStyle(
+                              primary: const Color(0xffffffff),
+                              backgroundColor: const Color(0xff2B67F6),
+                              textStyle: const TextStyle(
                                 fontSize: 14,
                                 fontWeight: FontWeight.w500,
                               ),
@@ -357,7 +357,7 @@ abstract class BaseStatefulState<T extends StatefulWidget> extends State<T> {
           ),
         );
       },
-      transitionDuration: Duration(milliseconds: 500),
+      transitionDuration: const Duration(milliseconds: 500),
       transitionBuilder: (_, anim, __, child) {
         return ScaleTransition(
           scale: CurvedAnimation(
@@ -433,8 +433,8 @@ abstract class BaseStatefulState<T extends StatefulWidget> extends State<T> {
           child: Center(
             child: Container(
               width: Get.width,
-              margin: EdgeInsets.all(DimenConstants.marginPaddingMedium),
-              padding: EdgeInsets.fromLTRB(
+              margin: const EdgeInsets.all(DimenConstants.marginPaddingMedium),
+              padding: const EdgeInsets.fromLTRB(
                 DimenConstants.marginPaddingMedium,
                 DimenConstants.marginPaddingMedium,
                 DimenConstants.marginPaddingMedium,
@@ -453,21 +453,21 @@ abstract class BaseStatefulState<T extends StatefulWidget> extends State<T> {
                     height: 45,
                     width: 45,
                   ),
-                  SizedBox(height: DimenConstants.marginPaddingMedium),
+                  const SizedBox(height: DimenConstants.marginPaddingMedium),
                   textCenter,
-                  SizedBox(height: DimenConstants.marginPaddingMedium),
-                  Container(
+                  const SizedBox(height: DimenConstants.marginPaddingMedium),
+                  SizedBox(
                     height: 40,
                     child: TextButton(
                       style: TextButton.styleFrom(
-                        padding: EdgeInsets.fromLTRB(
+                        padding: const EdgeInsets.fromLTRB(
                           DimenConstants.marginPaddingMedium * 5 / 2,
                           0,
                           DimenConstants.marginPaddingMedium * 5 / 2,
                           0,
                         ),
-                        primary: Color(0xff2B67F6),
-                        textStyle: TextStyle(
+                        primary: const Color(0xff2B67F6),
+                        textStyle: const TextStyle(
                           fontSize: 14,
                           fontWeight: FontWeight.w500,
                         ),
@@ -481,19 +481,19 @@ abstract class BaseStatefulState<T extends StatefulWidget> extends State<T> {
                         Get.back();
                         onClickConfirm.call();
                       },
-                      child: Text(
+                      child: const Text(
                         "Đóng",
                       ),
                     ),
                   ),
-                  SizedBox(height: DimenConstants.marginPaddingMedium),
+                  const SizedBox(height: DimenConstants.marginPaddingMedium),
                 ],
               ),
             ),
           ),
         );
       },
-      transitionDuration: Duration(milliseconds: 500),
+      transitionDuration: const Duration(milliseconds: 500),
       transitionBuilder: (_, anim, __, child) {
         return ScaleTransition(
           scale: CurvedAnimation(

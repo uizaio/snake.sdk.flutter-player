@@ -1,20 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
+import 'package:snake_player_flutter/snake_player_flutter.dart';
 import 'package:snake_player_flutter_example/sample/basic_player_page.dart';
 
-import 'lib/common/const/dimen_constants.dart';
 import 'lib/util/ui_utils.dart';
 import 'lib/util/url_launcher_utils.dart';
 
 class MenuScreen extends StatelessWidget {
+  const MenuScreen({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Main menu'),
+        title: const Text('Main menu'),
         leading: IconButton(
-          icon: Icon(
+          icon: const Icon(
             Icons.arrow_back,
             color: Colors.white,
           ),
@@ -24,16 +26,16 @@ class MenuScreen extends StatelessWidget {
         ),
       ),
       body: ListView(
-        physics: BouncingScrollPhysics(),
-        padding: EdgeInsets.all(DimenConstants.marginPaddingMedium),
+        physics: const BouncingScrollPhysics(),
+        padding: const EdgeInsets.all(DimenConstants.marginPaddingMedium),
         children: [
           UIUtils.getButton(
             "BasicPlayerPage",
             () {
-              Get.to(BasicPlayerPage());
+              Get.to(const BasicPlayerPage());
             },
           ),
-          SizedBox(height: 100),
+          const SizedBox(height: 100),
           UIUtils.getButton(
             "Github",
             () {

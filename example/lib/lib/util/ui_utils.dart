@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:snake_player_flutter_example/lib/common/const/dimen_constants.dart';
+import 'package:snake_player_flutter/snake_player_flutter.dart';
 
 class UIUtils {
   static ElevatedButton getButton(
@@ -12,14 +12,14 @@ class UIUtils {
       style: ElevatedButton.styleFrom(
         primary: Colors.white70, //bkg color
         onPrimary: Colors.black, //text color
-        shape: new RoundedRectangleBorder(
-          borderRadius: new BorderRadius.circular(DimenConstants.radiusMedium),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(DimenConstants.radiusMedium),
         ),
       ),
 
-      child: new Text(
+      child: Text(
         text,
-        style: TextStyle(
+        style: const TextStyle(
           // color: Colors.black,
           fontSize: DimenConstants.txtMedium,
         ),
@@ -37,7 +37,7 @@ class UIUtils {
   }
 
   static TextStyle getStyleText() {
-    return TextStyle(
+    return const TextStyle(
       color: Colors.black,
       fontSize: DimenConstants.txtMedium,
     );
@@ -57,7 +57,7 @@ class UIUtils {
       builder: (context) => CupertinoAlertDialog(
         content: Text(
           message,
-          style: TextStyle(
+          style: const TextStyle(
             fontSize: 16,
             fontWeight: FontWeight.w400,
             color: Color(0xff232426),
@@ -69,7 +69,7 @@ class UIUtils {
             CupertinoDialogAction(
               child: Text(
                 cancelTitle,
-                style: TextStyle(
+                style: const TextStyle(
                   fontSize: 16,
                   fontWeight: FontWeight.w400,
                   color: Color(0xff0A79F8),
@@ -84,7 +84,7 @@ class UIUtils {
           CupertinoDialogAction(
             child: Text(
               okTitle,
-              style: TextStyle(
+              style: const TextStyle(
                 fontSize: 16,
                 fontWeight: FontWeight.w400,
                 color: Color(0xffFF0000),
@@ -127,14 +127,14 @@ class UIUtils {
       message, // message
       // barBlur: 20,
       isDismissible: true,
-      duration: Duration(seconds: 3),
+      duration: const Duration(seconds: 3),
     );
   }
 
   static Widget buildHorizontalDivider(
       Color color, double width, double height) {
     return Container(
-      margin: EdgeInsets.all(0.0),
+      margin: const EdgeInsets.all(0.0),
       height: height,
       width: width,
       color: color,
@@ -143,7 +143,7 @@ class UIUtils {
 
   static Widget buildVerticalDivider(Color color, double height) {
     return Container(
-      margin: EdgeInsets.all(0.0),
+      margin: const EdgeInsets.all(0.0),
       height: height,
       width: 1,
       color: color,
@@ -156,24 +156,24 @@ class UIUtils {
       title,
       message,
       isDismissible: true,
-      duration: Duration(seconds: 2),
+      duration: const Duration(seconds: 2),
       titleText: Text(
         title,
-        style: TextStyle(
+        style: const TextStyle(
           fontSize: 14,
           fontWeight: FontWeight.w700,
           color: Color(0xff232426),
         ),
       ),
-      icon: Image(
+      icon: const Image(
         image: AssetImage('assets/images/ic_check_mark_green.png'),
         width: 20,
         height: 15,
       ),
-      backgroundColor: Color.fromARGB(255, 212, 245, 217),
+      backgroundColor: const Color.fromARGB(255, 212, 245, 217),
       snackStyle: SnackStyle.GROUNDED,
       margin: EdgeInsets.zero,
-      colorText: Color.fromARGB(255, 35, 36, 38),
+      colorText: const Color.fromARGB(255, 35, 36, 38),
       snackPosition: isTop ? SnackPosition.TOP : SnackPosition.BOTTOM,
     );
   }
@@ -184,25 +184,25 @@ class UIUtils {
       title,
       message,
       isDismissible: true,
-      duration: Duration(seconds: 2),
+      duration: const Duration(seconds: 2),
       titleText: Text(
         title,
-        style: TextStyle(
+        style: const TextStyle(
           fontSize: 14,
           fontWeight: FontWeight.w700,
           color: Color(0xff232426),
         ),
       ),
-      icon: Image(
+      icon: const Image(
         image: AssetImage('assets/images/ic_x.png'),
         width: 20,
         height: 20,
         color: Color(0xffF13232),
       ),
-      backgroundColor: Color(0xffFFDFDF),
+      backgroundColor: const Color(0xffFFDFDF),
       snackStyle: SnackStyle.GROUNDED,
       margin: EdgeInsets.zero,
-      colorText: Color(0xff232426),
+      colorText: const Color(0xff232426),
       snackPosition: isTop ? SnackPosition.TOP : SnackPosition.BOTTOM,
     );
   }
