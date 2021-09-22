@@ -9,6 +9,7 @@ import 'package:snake_player_flutter_example/sample/basic_player_page.dart';
 import 'package:snake_player_flutter_example/sample/controls_configuration_page.dart';
 import 'package:snake_player_flutter_example/sample/event_listener_page.dart';
 import 'package:snake_player_flutter_example/sample/normal_player_page.dart';
+import 'package:snake_player_flutter_example/sample/subtitles_page.dart';
 
 import 'common/constant/video_constants.dart';
 import 'common/util/ui_utils.dart';
@@ -107,6 +108,12 @@ class _MenuScreenState extends State<MenuScreen> {
             "EventListenerPage",
                 () {
               Get.to(const EventListenerPage());
+            },
+          ),
+          UIUtils.getButton(
+            "SubtitlesPage",
+                () {
+              Get.to(const SubtitlesPage());
             },
           ),
           const SizedBox(height: 100),
