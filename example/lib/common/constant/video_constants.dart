@@ -33,4 +33,6 @@ class VideoConstants {
       "https://mtoczko.github.io/hls-test-streams/test-group/playlist.m3u8";
   static String elephantDreamStreamUrl =
       "http://cdn.theoplayer.com/video/elephants-dream/playlist.m3u8";
+  static const String phantomVideoUrl =
+      "http://sample.vodobox.com/skate_phantom_flex_4k/skate_phantom_flex_4k.m3u8";
 }
