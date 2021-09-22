@@ -6,10 +6,10 @@ import 'menu_screen.dart';
 
 void main() async {
   SystemChrome.setSystemUIOverlayStyle(
-    SystemUiOverlayStyle(
+    const SystemUiOverlayStyle(
       systemNavigationBarColor: Colors.blue, // navigation bar color
       systemNavigationBarIconBrightness:
-      Brightness.light, //navigation bar icons' color
+          Brightness.light, //navigation bar icons' color
     ),
   );
   // needed if you intend to initialize in the `main` function
@@ -24,7 +24,7 @@ void main() async {
         primarySwatch: Colors.blue,
         backgroundColor: Colors.white,
       ),
-      home: MenuScreen(),
+      home: const MenuScreen(),
     ),
   );
 }

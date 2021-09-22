@@ -1,7 +1,7 @@
 import 'package:better_player/better_player.dart';
 import 'package:flutter/material.dart';
 import 'package:snake_player_flutter/snake_player_flutter.dart';
-import 'package:snake_player_flutter_example/lib/util/snake_utils.dart';
+import 'package:snake_player_flutter_example/lib/util/file_utils.dart';
 
 class BasicPlayerPage extends StatefulWidget {
   const BasicPlayerPage({Key? key}) : super(key: key);
@@ -42,7 +42,7 @@ class _BasicPlayerPageState extends State<BasicPlayerPage> {
           ),
           const SizedBox(height: 8),
           FutureBuilder<String>(
-            future: SnakeUtils.getFileUrl(VideoConstants.fileTestVideoUrl),
+            future: FileUtils.getFileUrl(VideoConstants.fileTestVideoUrl),
             builder: (BuildContext context, AsyncSnapshot<String> snapshot) {
               if (snapshot.data != null) {
                 return BetterPlayer.file(snapshot.data!);
