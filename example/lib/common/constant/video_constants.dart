@@ -29,4 +29,6 @@ class VideoConstants {
   };
   static const String hlsPlaylistUrl =
       "https://bitdash-a.akamaihd.net/content/sintel/hls/playlist.m3u8";
+  static const String hlsTestStreamUrl =
+      "https://mtoczko.github.io/hls-test-streams/test-group/playlist.m3u8";
 }

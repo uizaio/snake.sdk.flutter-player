@@ -9,6 +9,7 @@ import 'package:snake_player_flutter_example/sample/basic_player_page.dart';
 import 'package:snake_player_flutter_example/sample/controls_configuration_page.dart';
 import 'package:snake_player_flutter_example/sample/event_listener_page.dart';
 import 'package:snake_player_flutter_example/sample/hls_subtitles_page.dart';
+import 'package:snake_player_flutter_example/sample/hls_tracks_page.dart';
 import 'package:snake_player_flutter_example/sample/normal_player_page.dart';
 import 'package:snake_player_flutter_example/sample/resolutions_page.dart';
 import 'package:snake_player_flutter_example/sample/subtitles_page.dart';
@@ -128,6 +129,12 @@ class _MenuScreenState extends State<MenuScreen> {
             "HlsSubtitlesPage",
                 () {
               Get.to(const HlsSubtitlesPage());
+            },
+          ),
+          UIUtils.getButton(
+            "HlsTracksPage",
+                () {
+              Get.to(const HlsTracksPage());
             },
           ),
           const SizedBox(height: 100),
