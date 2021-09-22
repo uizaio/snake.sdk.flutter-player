@@ -38,17 +38,19 @@ class _MenuScreenState extends State<MenuScreen> {
 
   ///Save video to file, so we can use it later
   Future _saveAssetVideoToFile() async {
-    var content = await rootBundle.load("assets/testvideo.mp4");
+    var content =
+        await rootBundle.load("assets/${VideoConstants.fileTestVideoUrl}");
     final directory = await getApplicationDocumentsDirectory();
-    var file = File("${directory.path}/testvideo.mp4");
+    var file = File("${directory.path}/${VideoConstants.fileTestVideoUrl}");
     file.writeAsBytesSync(content.buffer.asUint8List());
   }
 
   Future _saveAssetEncryptVideoToFile() async {
-    var content =
-        await rootBundle.load("assets/${VideoConstants.fileTestVideoEncryptUrl}");
+    var content = await rootBundle
+        .load("assets/${VideoConstants.fileTestVideoEncryptUrl}");
     final directory = await getApplicationDocumentsDirectory();
-    var file = File("${directory.path}/${VideoConstants.fileTestVideoEncryptUrl}");
+    var file =
+        File("${directory.path}/${VideoConstants.fileTestVideoEncryptUrl}");
     file.writeAsBytesSync(content.buffer.asUint8List());
   }
 
