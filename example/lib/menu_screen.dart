@@ -5,6 +5,7 @@ import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:snake_player_flutter/snake_player_flutter.dart';
+import 'package:snake_player_flutter_example/sample/auto_fullscreen_orientation_page.dart';
 import 'package:snake_player_flutter_example/sample/basic_player_page.dart';
 import 'package:snake_player_flutter_example/sample/cache_page.dart';
 import 'package:snake_player_flutter_example/sample/controller_controls_page.dart';
@@ -190,6 +191,12 @@ class _MenuScreenState extends State<MenuScreen> {
             "ControllerControlsPage",
                 () {
               Get.to(const ControllerControlsPage());
+            },
+          ),
+          UIUtils.getButton(
+            "AutoFullscreenOrientationPage",
+                () {
+              Get.to(const AutoFullscreenOrientationPage());
             },
           ),
           const SizedBox(height: 100),
