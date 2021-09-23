@@ -20,6 +20,7 @@ import 'package:snake_player_flutter_example/sample/notification_player_page.dar
 import 'package:snake_player_flutter_example/sample/overridden_aspect_ratio_page.dart';
 import 'package:snake_player_flutter_example/sample/playlist_page.dart';
 import 'package:snake_player_flutter_example/sample/resolutions_page.dart';
+import 'package:snake_player_flutter_example/sample/reusable_video_list/reusable_video_list_page.dart';
 import 'package:snake_player_flutter_example/sample/rotation_and_fit_page.dart';
 import 'package:snake_player_flutter_example/sample/subtitles_page.dart';
 import 'package:snake_player_flutter_example/sample/video_list/video_list_page.dart';
@@ -211,6 +212,12 @@ class _MenuScreenState extends State<MenuScreen> {
             "NotificationPlayerPage",
                 () {
               Get.to(const NotificationPlayerPage());
+            },
+          ),
+          UIUtils.getButton(
+            "ReusableVideoListPage Beta",
+                () {
+              Get.to(const ReusableVideoListPage());
             },
           ),
           const SizedBox(height: 100),
