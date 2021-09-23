@@ -7,6 +7,7 @@ import 'package:path_provider/path_provider.dart';
 import 'package:snake_player_flutter/snake_player_flutter.dart';
 import 'package:snake_player_flutter_example/sample/basic_player_page.dart';
 import 'package:snake_player_flutter_example/sample/cache_page.dart';
+import 'package:snake_player_flutter_example/sample/controller_controls_page.dart';
 import 'package:snake_player_flutter_example/sample/controls_configuration_page.dart';
 import 'package:snake_player_flutter_example/sample/event_listener_page.dart';
 import 'package:snake_player_flutter_example/sample/hls_audio_page.dart';
@@ -183,6 +184,12 @@ class _MenuScreenState extends State<MenuScreen> {
             "MemoryPlayerPage",
                 () {
               Get.to(const MemoryPlayerPage());
+            },
+          ),
+          UIUtils.getButton(
+            "ControllerControlsPage",
+                () {
+              Get.to(const ControllerControlsPage());
             },
           ),
           const SizedBox(height: 100),
