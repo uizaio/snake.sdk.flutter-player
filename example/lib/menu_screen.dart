@@ -19,6 +19,7 @@ import 'package:snake_player_flutter_example/sample/memory_player_page.dart';
 import 'package:snake_player_flutter_example/sample/normal_player_page.dart';
 import 'package:snake_player_flutter_example/sample/notification_player_page.dart';
 import 'package:snake_player_flutter_example/sample/overridden_aspect_ratio_page.dart';
+import 'package:snake_player_flutter_example/sample/placeholder_until_play_page.dart';
 import 'package:snake_player_flutter_example/sample/playlist_page.dart';
 import 'package:snake_player_flutter_example/sample/resolutions_page.dart';
 import 'package:snake_player_flutter_example/sample/reusable_video_list/reusable_video_list_page.dart';
@@ -225,6 +226,12 @@ class _MenuScreenState extends State<MenuScreen> {
             "FadePlaceholderPage",
                 () {
               Get.to(const FadePlaceholderPage());
+            },
+          ),
+          UIUtils.getButton(
+            "PlaceholderUntilPlayPage",
+                () {
+              Get.to(const PlaceholderUntilPlayPage());
             },
           ),
           const SizedBox(height: 100),
