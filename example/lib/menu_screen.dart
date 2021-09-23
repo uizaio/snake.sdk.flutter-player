@@ -5,16 +5,26 @@ import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:snake_player_flutter/snake_player_flutter.dart';
+import 'package:snake_player_flutter_example/sample/auto_fullscreen_orientation_page.dart';
 import 'package:snake_player_flutter_example/sample/basic_player_page.dart';
 import 'package:snake_player_flutter_example/sample/cache_page.dart';
+import 'package:snake_player_flutter_example/sample/controller_controls_page.dart';
 import 'package:snake_player_flutter_example/sample/controls_configuration_page.dart';
+import 'package:snake_player_flutter_example/sample/custom_controls/change_player_theme_page.dart';
 import 'package:snake_player_flutter_example/sample/event_listener_page.dart';
+import 'package:snake_player_flutter_example/sample/fade_placeholder_page.dart';
 import 'package:snake_player_flutter_example/sample/hls_audio_page.dart';
 import 'package:snake_player_flutter_example/sample/hls_subtitles_page.dart';
 import 'package:snake_player_flutter_example/sample/hls_tracks_page.dart';
+import 'package:snake_player_flutter_example/sample/memory_player_page.dart';
 import 'package:snake_player_flutter_example/sample/normal_player_page.dart';
+import 'package:snake_player_flutter_example/sample/notification_player_page.dart';
+import 'package:snake_player_flutter_example/sample/overridden_aspect_ratio_page.dart';
+import 'package:snake_player_flutter_example/sample/placeholder_until_play_page.dart';
 import 'package:snake_player_flutter_example/sample/playlist_page.dart';
 import 'package:snake_player_flutter_example/sample/resolutions_page.dart';
+import 'package:snake_player_flutter_example/sample/reusable_video_list/reusable_video_list_page.dart';
+import 'package:snake_player_flutter_example/sample/rotation_and_fit_page.dart';
 import 'package:snake_player_flutter_example/sample/subtitles_page.dart';
 import 'package:snake_player_flutter_example/sample/video_list/video_list_page.dart';
 
@@ -163,6 +173,72 @@ class _MenuScreenState extends State<MenuScreen> {
             "VideoListPage",
                 () {
               Get.to(const VideoListPage());
+            },
+          ),
+          UIUtils.getButton(
+            "VideoListPage",
+                () {
+              Get.to(const VideoListPage());
+            },
+          ),
+          UIUtils.getButton(
+            "RotationAndFitPage",
+                () {
+              Get.to(const RotationAndFitPage());
+            },
+          ),
+          UIUtils.getButton(
+            "MemoryPlayerPage",
+                () {
+              Get.to(const MemoryPlayerPage());
+            },
+          ),
+          UIUtils.getButton(
+            "ControllerControlsPage",
+                () {
+              Get.to(const ControllerControlsPage());
+            },
+          ),
+          UIUtils.getButton(
+            "AutoFullscreenOrientationPage",
+                () {
+              Get.to(const AutoFullscreenOrientationPage());
+            },
+          ),
+          UIUtils.getButton(
+            "OverriddenAspectRatioPage",
+                () {
+              Get.to(const OverriddenAspectRatioPage());
+            },
+          ),
+          UIUtils.getButton(
+            "NotificationPlayerPage",
+                () {
+              Get.to(const NotificationPlayerPage());
+            },
+          ),
+          UIUtils.getButton(
+            "ReusableVideoListPage Beta",
+                () {
+              Get.to(const ReusableVideoListPage());
+            },
+          ),
+          UIUtils.getButton(
+            "FadePlaceholderPage",
+                () {
+              Get.to(const FadePlaceholderPage());
+            },
+          ),
+          UIUtils.getButton(
+            "PlaceholderUntilPlayPage",
+                () {
+              Get.to(const PlaceholderUntilPlayPage());
+            },
+          ),
+          UIUtils.getButton(
+            "ChangePlayerThemePage",
+                () {
+              Get.to(const ChangePlayerThemePage());
             },
           ),
           const SizedBox(height: 100),
