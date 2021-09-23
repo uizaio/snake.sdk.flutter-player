@@ -16,6 +16,7 @@ import 'package:snake_player_flutter_example/sample/hls_subtitles_page.dart';
 import 'package:snake_player_flutter_example/sample/hls_tracks_page.dart';
 import 'package:snake_player_flutter_example/sample/memory_player_page.dart';
 import 'package:snake_player_flutter_example/sample/normal_player_page.dart';
+import 'package:snake_player_flutter_example/sample/overridden_aspect_ratio_page.dart';
 import 'package:snake_player_flutter_example/sample/playlist_page.dart';
 import 'package:snake_player_flutter_example/sample/resolutions_page.dart';
 import 'package:snake_player_flutter_example/sample/rotation_and_fit_page.dart';
@@ -197,6 +198,12 @@ class _MenuScreenState extends State<MenuScreen> {
             "AutoFullscreenOrientationPage",
                 () {
               Get.to(const AutoFullscreenOrientationPage());
+            },
+          ),
+          UIUtils.getButton(
+            "OverriddenAspectRatioPage",
+                () {
+              Get.to(const OverriddenAspectRatioPage());
             },
           ),
           const SizedBox(height: 100),
