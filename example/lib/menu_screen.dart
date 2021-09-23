@@ -15,6 +15,7 @@ import 'package:snake_player_flutter_example/sample/hls_tracks_page.dart';
 import 'package:snake_player_flutter_example/sample/normal_player_page.dart';
 import 'package:snake_player_flutter_example/sample/playlist_page.dart';
 import 'package:snake_player_flutter_example/sample/resolutions_page.dart';
+import 'package:snake_player_flutter_example/sample/rotation_and_fit_page.dart';
 import 'package:snake_player_flutter_example/sample/subtitles_page.dart';
 import 'package:snake_player_flutter_example/sample/video_list/video_list_page.dart';
 
@@ -163,6 +164,18 @@ class _MenuScreenState extends State<MenuScreen> {
             "VideoListPage",
                 () {
               Get.to(const VideoListPage());
+            },
+          ),
+          UIUtils.getButton(
+            "VideoListPage",
+                () {
+              Get.to(const VideoListPage());
+            },
+          ),
+          UIUtils.getButton(
+            "RotationAndFitPage",
+                () {
+              Get.to(const RotationAndFitPage());
             },
           ),
           const SizedBox(height: 100),
