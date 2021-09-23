@@ -12,6 +12,7 @@ import 'package:snake_player_flutter_example/sample/event_listener_page.dart';
 import 'package:snake_player_flutter_example/sample/hls_audio_page.dart';
 import 'package:snake_player_flutter_example/sample/hls_subtitles_page.dart';
 import 'package:snake_player_flutter_example/sample/hls_tracks_page.dart';
+import 'package:snake_player_flutter_example/sample/memory_player_page.dart';
 import 'package:snake_player_flutter_example/sample/normal_player_page.dart';
 import 'package:snake_player_flutter_example/sample/playlist_page.dart';
 import 'package:snake_player_flutter_example/sample/resolutions_page.dart';
@@ -176,6 +177,12 @@ class _MenuScreenState extends State<MenuScreen> {
             "RotationAndFitPage",
                 () {
               Get.to(const RotationAndFitPage());
+            },
+          ),
+          UIUtils.getButton(
+            "MemoryPlayerPage",
+                () {
+              Get.to(const MemoryPlayerPage());
             },
           ),
           const SizedBox(height: 100),
