@@ -9,8 +9,11 @@ import 'package:snake_player_flutter_example/sample/auto_fullscreen_orientation_
 import 'package:snake_player_flutter_example/sample/basic_player_page.dart';
 import 'package:snake_player_flutter_example/sample/cache_page.dart';
 import 'package:snake_player_flutter_example/sample/controller_controls_page.dart';
+import 'package:snake_player_flutter_example/sample/controls_always_visible_page.dart';
 import 'package:snake_player_flutter_example/sample/controls_configuration_page.dart';
 import 'package:snake_player_flutter_example/sample/custom_controls/change_player_theme_page.dart';
+import 'package:snake_player_flutter_example/sample/dash_page.dart';
+import 'package:snake_player_flutter_example/sample/drm_page.dart';
 import 'package:snake_player_flutter_example/sample/event_listener_page.dart';
 import 'package:snake_player_flutter_example/sample/fade_placeholder_page.dart';
 import 'package:snake_player_flutter_example/sample/hls_audio_page.dart';
@@ -20,6 +23,8 @@ import 'package:snake_player_flutter_example/sample/memory_player_page.dart';
 import 'package:snake_player_flutter_example/sample/normal_player_page.dart';
 import 'package:snake_player_flutter_example/sample/notification_player_page.dart';
 import 'package:snake_player_flutter_example/sample/overridden_aspect_ratio_page.dart';
+import 'package:snake_player_flutter_example/sample/overriden_duration_page.dart';
+import 'package:snake_player_flutter_example/sample/picture_in_picture_page.dart';
 import 'package:snake_player_flutter_example/sample/placeholder_until_play_page.dart';
 import 'package:snake_player_flutter_example/sample/playlist_page.dart';
 import 'package:snake_player_flutter_example/sample/resolutions_page.dart';
@@ -28,6 +33,7 @@ import 'package:snake_player_flutter_example/sample/rotation_and_fit_page.dart';
 import 'package:snake_player_flutter_example/sample/subtitles_page.dart';
 import 'package:snake_player_flutter_example/sample/video_list/video_list_page.dart';
 
+import 'clearkey_page.dart';
 import 'common/constant/video_constants.dart';
 import 'common/util/ui_utils.dart';
 import 'common/util/url_launcher_utils.dart';
@@ -239,6 +245,49 @@ class _MenuScreenState extends State<MenuScreen> {
             "ChangePlayerThemePage",
                 () {
               Get.to(const ChangePlayerThemePage());
+            },
+          ),
+          UIUtils.getButton(
+            "OverriddenDurationPage",
+                () {
+              Get.to(const OverriddenDurationPage());
+            },
+          ),
+          UIUtils.getButton(
+            "PictureInPicturePage",
+                () {
+              Get.to(const PictureInPicturePage());
+            },
+          ),
+          UIUtils.getButton(
+            "ControlsAlwaysVisiblePage",
+                () {
+              Get.to(const ControlsAlwaysVisiblePage());
+            },
+          ),
+          UIUtils.getButton(
+            "DrmPage",
+                () {
+              Get.to(const DrmPage());
+            },
+          ),
+          UIUtils.getButton(
+            "ClearKeyPage",
+                () {
+              Get.to(const ClearKeyPage());
+            },
+          ),
+          UIUtils.getButton(
+            "DashPage",
+                () {
+              Get.to(const DashPage());
+            },
+          ),
+          const SizedBox(height: 100),
+          UIUtils.getButton(
+            "Advanced Player",
+                () {
+              //TODO
             },
           ),
           const SizedBox(height: 100),
