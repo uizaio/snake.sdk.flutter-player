@@ -285,6 +285,13 @@ class _MenuScreenState extends State<MenuScreen> {
           ),
           const SizedBox(height: 100),
           UIUtils.getButton(
+            "Advanced Player",
+                () {
+              //TODO
+            },
+          ),
+          const SizedBox(height: 100),
+          UIUtils.getButton(
             "Github",
             () {
               UrlLauncherUtils.launchInWebViewWithJavaScript(
