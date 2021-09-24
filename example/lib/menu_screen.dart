@@ -12,6 +12,7 @@ import 'package:snake_player_flutter_example/sample/controller_controls_page.dar
 import 'package:snake_player_flutter_example/sample/controls_always_visible_page.dart';
 import 'package:snake_player_flutter_example/sample/controls_configuration_page.dart';
 import 'package:snake_player_flutter_example/sample/custom_controls/change_player_theme_page.dart';
+import 'package:snake_player_flutter_example/sample/dash_page.dart';
 import 'package:snake_player_flutter_example/sample/drm_page.dart';
 import 'package:snake_player_flutter_example/sample/event_listener_page.dart';
 import 'package:snake_player_flutter_example/sample/fade_placeholder_page.dart';
@@ -274,6 +275,12 @@ class _MenuScreenState extends State<MenuScreen> {
             "ClearKeyPage",
                 () {
               Get.to(const ClearKeyPage());
+            },
+          ),
+          UIUtils.getButton(
+            "DashPage",
+                () {
+              Get.to(const DashPage());
             },
           ),
           const SizedBox(height: 100),
