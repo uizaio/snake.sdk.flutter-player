@@ -9,6 +9,7 @@ import 'package:snake_player_flutter_example/sample/auto_fullscreen_orientation_
 import 'package:snake_player_flutter_example/sample/basic_player_page.dart';
 import 'package:snake_player_flutter_example/sample/cache_page.dart';
 import 'package:snake_player_flutter_example/sample/controller_controls_page.dart';
+import 'package:snake_player_flutter_example/sample/controls_always_visible_page.dart';
 import 'package:snake_player_flutter_example/sample/controls_configuration_page.dart';
 import 'package:snake_player_flutter_example/sample/custom_controls/change_player_theme_page.dart';
 import 'package:snake_player_flutter_example/sample/event_listener_page.dart';
@@ -253,6 +254,12 @@ class _MenuScreenState extends State<MenuScreen> {
             "PictureInPicturePage",
                 () {
               Get.to(const PictureInPicturePage());
+            },
+          ),
+          UIUtils.getButton(
+            "ControlsAlwaysVisiblePage",
+                () {
+              Get.to(const ControlsAlwaysVisiblePage());
             },
           ),
           const SizedBox(height: 100),
