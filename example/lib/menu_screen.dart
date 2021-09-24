@@ -21,6 +21,7 @@ import 'package:snake_player_flutter_example/sample/normal_player_page.dart';
 import 'package:snake_player_flutter_example/sample/notification_player_page.dart';
 import 'package:snake_player_flutter_example/sample/overridden_aspect_ratio_page.dart';
 import 'package:snake_player_flutter_example/sample/overriden_duration_page.dart';
+import 'package:snake_player_flutter_example/sample/picture_in_picture_page.dart';
 import 'package:snake_player_flutter_example/sample/placeholder_until_play_page.dart';
 import 'package:snake_player_flutter_example/sample/playlist_page.dart';
 import 'package:snake_player_flutter_example/sample/resolutions_page.dart';
@@ -246,6 +247,12 @@ class _MenuScreenState extends State<MenuScreen> {
             "OverriddenDurationPage",
                 () {
               Get.to(const OverriddenDurationPage());
+            },
+          ),
+          UIUtils.getButton(
+            "PictureInPicturePage",
+                () {
+              Get.to(const PictureInPicturePage());
             },
           ),
           const SizedBox(height: 100),
