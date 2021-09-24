@@ -58,4 +58,6 @@ class VideoConstants {
   static String fairplayCertificateUrl =
       "https://github.com/koldo92/betterplayer/raw/fairplay_ezdrm/example/assets/eleisure.cer";
   static String fairplayLicenseUrl = "https://fps.ezdrm.com/api/licenses/";
+  static const String networkTestVideoEncryptUrl =
+      "https://github.com/tinusneethling/betterplayer/raw/ClearKeySupport/example/assets/testvideo_encrypt.mp4";
 }

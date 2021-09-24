@@ -32,6 +32,7 @@ import 'package:snake_player_flutter_example/sample/rotation_and_fit_page.dart';
 import 'package:snake_player_flutter_example/sample/subtitles_page.dart';
 import 'package:snake_player_flutter_example/sample/video_list/video_list_page.dart';
 
+import 'clearkey_page.dart';
 import 'common/constant/video_constants.dart';
 import 'common/util/ui_utils.dart';
 import 'common/util/url_launcher_utils.dart';
@@ -267,6 +268,12 @@ class _MenuScreenState extends State<MenuScreen> {
             "DrmPage",
                 () {
               Get.to(const DrmPage());
+            },
+          ),
+          UIUtils.getButton(
+            "ClearKeyPage",
+                () {
+              Get.to(const ClearKeyPage());
             },
           ),
           const SizedBox(height: 100),
