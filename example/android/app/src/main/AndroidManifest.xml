@@ -5,9 +5,12 @@
         android:icon="@mipmap/ic_launcher"
         android:label="snake_player_flutter_example"
         android:usesCleartextTraffic="true">
+
+<!--        android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"-->
         <activity
             android:name=".MainActivity"
-            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
+            android:configChanges=
+                "screenSize|smallestScreenSize|screenLayout|orientation"
             android:hardwareAccelerated="true"
             android:launchMode="singleTask"
             android:resizeableActivity="true"
