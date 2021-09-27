@@ -23,6 +23,19 @@ class _AdvancedPlayerPageState extends State<AdvancedPlayerPage> {
       fit: BoxFit.contain,
       autoPlay: true,
       looping: true,
+      placeholder: Center(
+        child: Text(
+          "Ex: This is place holder",
+          style: TextStyle(color: Colors.red),
+        ),
+      ),
+      showPlaceholderUntilPlay: true,
+      overlay: Center(
+        child: Text(
+          "Ex: This is widget overlay",
+          style: TextStyle(color: Colors.green),
+        ),
+      ),
     );
     _betterPlayerController = BetterPlayerController(betterPlayerConfiguration);
     _setupPlayer(VideoConstants.forBiggerBlazesUrl);
