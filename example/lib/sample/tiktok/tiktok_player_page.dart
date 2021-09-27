@@ -63,21 +63,16 @@ class Pages extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    BetterPlayerControlsConfiguration _controlsConfiguration =
-        const BetterPlayerControlsConfiguration(
-      enableSkips: false,
-      enableFullscreen: false,
-    );
     BetterPlayerConfiguration betterPlayerConfiguration =
         BetterPlayerConfiguration(
       aspectRatio: ratio,
       fit: BoxFit.cover,
       autoPlay: true,
       looping: true,
-      controlsConfiguration: _controlsConfiguration,
     );
     BetterPlayerController _betterPlayerController =
         BetterPlayerController(betterPlayerConfiguration);
+    _betterPlayerController.setControlsEnabled(false);
     BetterPlayerDataSource _betterPlayerDataSource = BetterPlayerDataSource(
       BetterPlayerDataSourceType.network,
       link,
