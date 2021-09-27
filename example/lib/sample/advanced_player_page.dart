@@ -1,5 +1,6 @@
 import 'package:better_player/better_player.dart';
 import 'package:flutter/material.dart';
+import 'package:snake_player_flutter/snake_player_flutter.dart';
 import 'package:snake_player_flutter_example/common/constant/video_constants.dart';
 
 class AdvancedPlayerPage extends StatefulWidget {
@@ -12,11 +13,12 @@ class AdvancedPlayerPage extends StatefulWidget {
 class _AdvancedPlayerPageState extends State<AdvancedPlayerPage> {
   late BetterPlayerController _betterPlayerController;
   late BetterPlayerDataSource _betterPlayerDataSource;
+  String _customLink = "";
 
   @override
   void initState() {
     BetterPlayerConfiguration betterPlayerConfiguration =
-    const BetterPlayerConfiguration(
+        const BetterPlayerConfiguration(
       aspectRatio: 16 / 9,
       fit: BoxFit.contain,
       autoPlay: true,
@@ -42,6 +44,7 @@ class _AdvancedPlayerPageState extends State<AdvancedPlayerPage> {
         title: const Text("AdvancedPlayerPage"),
       ),
       body: ListView(
+        padding: const EdgeInsets.all(DimenConstants.marginPaddingMedium),
         children: [
           AspectRatio(
             aspectRatio: 16 / 9,
@@ -63,6 +66,25 @@ class _AdvancedPlayerPageState extends State<AdvancedPlayerPage> {
             child: const Text("Play LIVE"),
             onPressed: () async {
               _setupPlayer(VideoConstants.linkPlayLIVE);
+            },
+          ),
+          const SizedBox(height: 100),
+          TextField(
+            decoration: const InputDecoration(
+              labelText: 'Enter your link',
+            ),
+            onChanged: (text) {
+              setState(() {
+                _customLink = text;
+              });
+            },
+          ),
+          ElevatedButton(
+            child: const Text("Play custom link"),
+            onPressed: () async {
+              if (_customLink.isNotEmpty) {
+                _setupPlayer(_customLink);
+              }
             },
           ),
         ],
