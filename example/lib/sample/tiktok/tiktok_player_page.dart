@@ -15,18 +15,27 @@ class _TiktokPlayerPageState extends State<TiktokPlayerPage> {
   final List<Widget> _list = <Widget>[
     Pages(
       link: VideoConstants.linkPlayVODPortrait1,
+      ratio: Get.width / Get.height,
     ),
     Pages(
       link: VideoConstants.linkPlayVODPortrait2,
+      ratio: Get.width / Get.height,
+    ),
+    Pages(
+      link: VideoConstants.linkPlayVOD,
+      ratio: 16 / 9,
     ),
     Pages(
       link: VideoConstants.linkPlayVODPortrait3,
+      ratio: Get.width / Get.height,
     ),
     Pages(
       link: VideoConstants.linkPlayVODPortrait4,
+      ratio: Get.width / Get.height,
     ),
     Pages(
       link: VideoConstants.linkPlayVODPortrait5,
+      ratio: Get.width / Get.height,
     ),
   ];
 
@@ -48,8 +57,9 @@ class _TiktokPlayerPageState extends State<TiktokPlayerPage> {
 
 class Pages extends StatelessWidget {
   final String link;
+  final double ratio;
 
-  const Pages({required this.link});
+  const Pages({required this.link, required this.ratio});
 
   @override
   Widget build(BuildContext context) {
@@ -60,7 +70,7 @@ class Pages extends StatelessWidget {
     );
     BetterPlayerConfiguration betterPlayerConfiguration =
         BetterPlayerConfiguration(
-      aspectRatio: Get.width / Get.height,
+      aspectRatio: ratio,
       fit: BoxFit.cover,
       autoPlay: true,
       looping: true,
@@ -74,13 +84,11 @@ class Pages extends StatelessWidget {
     );
     _betterPlayerController.setupDataSource(_betterPlayerDataSource);
 
-    return Stack(
-      children: <Widget>[
-        AspectRatio(
-          aspectRatio: Get.width / Get.height,
-          child: BetterPlayer(controller: _betterPlayerController),
-        ),
-      ],
+    return Center(
+      child: AspectRatio(
+        aspectRatio: ratio,
+        child: BetterPlayer(controller: _betterPlayerController),
+      ),
     );
   }
 }
