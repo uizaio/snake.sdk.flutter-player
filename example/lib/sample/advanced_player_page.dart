@@ -17,25 +17,41 @@ class _AdvancedPlayerPageState extends State<AdvancedPlayerPage> {
 
   @override
   void initState() {
+    BetterPlayerControlsConfiguration _controlsConfiguration =
+        BetterPlayerControlsConfiguration(
+      controlBarColor: Colors.indigoAccent.withAlpha(200),
+      iconsColor: Colors.lightGreen,
+      playIcon: Icons.forward,
+      progressBarPlayedColor: Colors.grey,
+      progressBarHandleColor: Colors.lightGreen,
+      enableSkips: false,
+      enableFullscreen: false,
+      controlBarHeight: 60,
+      loadingColor: Colors.red,
+      overflowModalColor: Colors.indigo,
+      overflowModalTextColor: Colors.white,
+      overflowMenuIconsColor: Colors.white,
+    );
     BetterPlayerConfiguration betterPlayerConfiguration =
-        const BetterPlayerConfiguration(
+        BetterPlayerConfiguration(
       aspectRatio: 16 / 9,
       fit: BoxFit.contain,
       autoPlay: true,
       looping: true,
-      placeholder: Center(
+      placeholder: const Center(
         child: Text(
           "Ex: This is place holder",
           style: TextStyle(color: Colors.red),
         ),
       ),
       showPlaceholderUntilPlay: true,
-      overlay: Center(
+      overlay: const Center(
         child: Text(
           "Ex: This is widget overlay",
           style: TextStyle(color: Colors.green),
         ),
       ),
+      controlsConfiguration: _controlsConfiguration,
     );
     _betterPlayerController = BetterPlayerController(betterPlayerConfiguration);
     _setupPlayer(VideoConstants.forBiggerBlazesUrl);
