@@ -5,6 +5,7 @@ import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:snake_player_flutter/snake_player_flutter.dart';
+import 'package:snake_player_flutter_example/sample/advanced_player_page.dart';
 import 'package:snake_player_flutter_example/sample/auto_fullscreen_orientation_page.dart';
 import 'package:snake_player_flutter_example/sample/basic_player_page.dart';
 import 'package:snake_player_flutter_example/sample/cache_page.dart';
@@ -31,6 +32,7 @@ import 'package:snake_player_flutter_example/sample/resolutions_page.dart';
 import 'package:snake_player_flutter_example/sample/reusable_video_list/reusable_video_list_page.dart';
 import 'package:snake_player_flutter_example/sample/rotation_and_fit_page.dart';
 import 'package:snake_player_flutter_example/sample/subtitles_page.dart';
+import 'package:snake_player_flutter_example/sample/tiktok/tiktok_player_page.dart';
 import 'package:snake_player_flutter_example/sample/video_list/video_list_page.dart';
 
 import 'clearkey_page.dart';
@@ -117,177 +119,183 @@ class _MenuScreenState extends State<MenuScreen> {
           ),
           UIUtils.getButton(
             "NormalPlayerPage",
-                () {
+            () {
               Get.to(const NormalPlayerPage());
             },
           ),
           UIUtils.getButton(
             "ControlsConfigurationPage",
-                () {
+            () {
               Get.to(const ControlsConfigurationPage());
             },
           ),
           UIUtils.getButton(
             "EventListenerPage",
-                () {
+            () {
               Get.to(const EventListenerPage());
             },
           ),
           UIUtils.getButton(
             "SubtitlesPage",
-                () {
+            () {
               Get.to(const SubtitlesPage());
             },
           ),
           UIUtils.getButton(
             "ResolutionsPage",
-                () {
+            () {
               Get.to(const ResolutionsPage());
             },
           ),
           UIUtils.getButton(
             "HlsSubtitlesPage",
-                () {
+            () {
               Get.to(const HlsSubtitlesPage());
             },
           ),
           UIUtils.getButton(
             "HlsTracksPage",
-                () {
+            () {
               Get.to(const HlsTracksPage());
             },
           ),
           UIUtils.getButton(
             "HlsAudioPage",
-                () {
+            () {
               Get.to(const HlsAudioPage());
             },
           ),
           UIUtils.getButton(
             "CachePage",
-                () {
+            () {
               Get.to(const CachePage());
             },
           ),
           UIUtils.getButton(
             "PlaylistPage",
-                () {
+            () {
               Get.to(const PlaylistPage());
             },
           ),
           UIUtils.getButton(
             "VideoListPage",
-                () {
+            () {
               Get.to(const VideoListPage());
             },
           ),
           UIUtils.getButton(
             "VideoListPage",
-                () {
+            () {
               Get.to(const VideoListPage());
             },
           ),
           UIUtils.getButton(
             "RotationAndFitPage",
-                () {
+            () {
               Get.to(const RotationAndFitPage());
             },
           ),
           UIUtils.getButton(
             "MemoryPlayerPage",
-                () {
+            () {
               Get.to(const MemoryPlayerPage());
             },
           ),
           UIUtils.getButton(
             "ControllerControlsPage",
-                () {
+            () {
               Get.to(const ControllerControlsPage());
             },
           ),
           UIUtils.getButton(
             "AutoFullscreenOrientationPage",
-                () {
+            () {
               Get.to(const AutoFullscreenOrientationPage());
             },
           ),
           UIUtils.getButton(
             "OverriddenAspectRatioPage",
-                () {
+            () {
               Get.to(const OverriddenAspectRatioPage());
             },
           ),
           UIUtils.getButton(
             "NotificationPlayerPage",
-                () {
+            () {
               Get.to(const NotificationPlayerPage());
             },
           ),
           UIUtils.getButton(
             "ReusableVideoListPage Beta",
-                () {
+            () {
               Get.to(const ReusableVideoListPage());
             },
           ),
           UIUtils.getButton(
             "FadePlaceholderPage",
-                () {
+            () {
               Get.to(const FadePlaceholderPage());
             },
           ),
           UIUtils.getButton(
             "PlaceholderUntilPlayPage",
-                () {
+            () {
               Get.to(const PlaceholderUntilPlayPage());
             },
           ),
           UIUtils.getButton(
             "ChangePlayerThemePage",
-                () {
+            () {
               Get.to(const ChangePlayerThemePage());
             },
           ),
           UIUtils.getButton(
             "OverriddenDurationPage",
-                () {
+            () {
               Get.to(const OverriddenDurationPage());
             },
           ),
           UIUtils.getButton(
             "PictureInPicturePage",
-                () {
+            () {
               Get.to(const PictureInPicturePage());
             },
           ),
           UIUtils.getButton(
             "ControlsAlwaysVisiblePage",
-                () {
+            () {
               Get.to(const ControlsAlwaysVisiblePage());
             },
           ),
           UIUtils.getButton(
             "DrmPage",
-                () {
+            () {
               Get.to(const DrmPage());
             },
           ),
           UIUtils.getButton(
             "ClearKeyPage",
-                () {
+            () {
               Get.to(const ClearKeyPage());
             },
           ),
           UIUtils.getButton(
             "DashPage",
-                () {
+            () {
               Get.to(const DashPage());
             },
           ),
           const SizedBox(height: 100),
           UIUtils.getButton(
             "Advanced Player",
-                () {
-              //TODO
+            () {
+              Get.to(const AdvancedPlayerPage());
+            },
+          ),
+          UIUtils.getButton(
+            "Tiktok Player",
+            () {
+              Get.to(const TiktokPlayerPage());
             },
           ),
           const SizedBox(height: 100),
