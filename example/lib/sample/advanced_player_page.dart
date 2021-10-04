@@ -45,8 +45,9 @@ class _AdvancedPlayerPageState extends State<AdvancedPlayerPage> {
         ),
       ),
       showPlaceholderUntilPlay: true,
-      overlay: const Center(
-        child: Text(
+      overlay: Container(
+        padding: const EdgeInsets.all(DimenConstants.marginPaddingMedium),
+        child: const Text(
           "Ex: This is widget overlay",
           style: TextStyle(color: Colors.green),
         ),
