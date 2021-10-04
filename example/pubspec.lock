@@ -14,7 +14,7 @@ packages:
       name: better_player
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.0.74"
+    version: "0.0.76"
   boolean_selector:
     dependency: transitive
     description:
