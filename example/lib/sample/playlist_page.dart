@@ -30,6 +30,7 @@ class _PlaylistPageState extends State<PlaylistPage> {
         DeviceOrientation.portraitUp,
         DeviceOrientation.portraitDown,
       ],
+      autoPlay: true,
     );
     _betterPlayerPlaylistConfiguration =
         const BetterPlayerPlaylistConfiguration(

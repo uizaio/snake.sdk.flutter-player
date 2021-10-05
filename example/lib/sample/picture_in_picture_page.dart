@@ -20,6 +20,7 @@ class _PictureInPicturePageState extends State<PictureInPicturePage> {
         const BetterPlayerConfiguration(
       aspectRatio: 16 / 9,
       fit: BoxFit.contain,
+      autoPlay: true,
     );
     BetterPlayerDataSource dataSource = BetterPlayerDataSource(
       BetterPlayerDataSourceType.network,
