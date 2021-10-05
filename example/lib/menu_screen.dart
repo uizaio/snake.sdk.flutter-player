@@ -165,22 +165,16 @@ class _MenuScreenState extends State<MenuScreen> {
               Get.to(const HlsAudioPage());
             },
           ),
-          UIUtils.getButton(
-            "CachePage",
-            () {
-              Get.to(const CachePage());
-            },
-          ),
+          // UIUtils.getButton(
+          //   "CachePage",
+          //   () {
+          //     Get.to(const CachePage());
+          //   },
+          // ),
           UIUtils.getButton(
             "PlaylistPage",
             () {
               Get.to(const PlaylistPage());
-            },
-          ),
-          UIUtils.getButton(
-            "VideoListPage",
-            () {
-              Get.to(const VideoListPage());
             },
           ),
           UIUtils.getButton(
