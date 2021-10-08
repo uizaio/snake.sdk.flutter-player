@@ -106,21 +106,18 @@ class _PlaylistPageState extends State<PlaylistPage> {
               ),
               ElevatedButton(
                 onPressed: () {
-                  _betterPlayerPlaylistController!.setupDataSource(0);
+                  _betterPlayerPlaylistController?.setupDataSource(0);
                 },
-                child: const Text("Change to first data source"),
+                child: const Text("Change to first data source (position 0)"),
               ),
               ElevatedButton(
                 onPressed: () {
-                  _betterPlayerPlaylistController!.setupDataSource(2);
+                  _betterPlayerPlaylistController?.setupDataSource(2);
                 },
-                child: const Text("Change to last source"),
+                child: const Text("Change to last source (position 2)"),
               ),
               ElevatedButton(
                 onPressed: () {
-                  print("Currently playing video: " +
-                      _betterPlayerPlaylistController!.currentDataSourceIndex
-                          .toString());
                   Get.snackbar(
                     "Currently playing video",
                     _betterPlayerPlaylistController?.currentDataSourceIndex
@@ -132,8 +129,8 @@ class _PlaylistPageState extends State<PlaylistPage> {
               ),
               ElevatedButton(
                 onPressed: () {
-                  _betterPlayerPlaylistController!.betterPlayerController!
-                      .pause();
+                  _betterPlayerPlaylistController?.betterPlayerController
+                      ?.pause();
                 },
                 child: const Text(
                     "Pause current video with BetterPlayerController"),
@@ -148,7 +145,11 @@ class _PlaylistPageState extends State<PlaylistPage> {
                         VideoConstants.catImageUrl,
                         fit: BoxFit.cover,
                       ),
-                    )
+                    ),
+                    BetterPlayerDataSource(
+                      BetterPlayerDataSourceType.network,
+                      VideoConstants.forBiggerJoyridesVideoUrl,
+                    ),
                   ];
                   _betterPlayerPlaylistController?.setupDataSourceList(list);
                 },
@@ -163,5 +164,5 @@ class _PlaylistPageState extends State<PlaylistPage> {
 
   BetterPlayerPlaylistController? get _betterPlayerPlaylistController =>
       _betterPlayerPlaylistStateKey
-          .currentState!.betterPlayerPlaylistController;
+          .currentState?.betterPlayerPlaylistController;
 }
