@@ -1,6 +1,7 @@
 import 'package:better_player/better_player.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:get/get.dart';
 import 'package:snake_player_flutter/snake_player_flutter.dart';
 import 'package:snake_player_flutter_example/common/constant/video_constants.dart';
 import 'package:snake_player_flutter_example/common/util/file_utils.dart';
@@ -120,6 +121,12 @@ class _PlaylistPageState extends State<PlaylistPage> {
                   print("Currently playing video: " +
                       _betterPlayerPlaylistController!.currentDataSourceIndex
                           .toString());
+                  Get.snackbar(
+                    "Currently playing video",
+                    _betterPlayerPlaylistController?.currentDataSourceIndex
+                            .toString() ??
+                        "",
+                  );
                 },
                 child: const Text("Check currently playing video index"),
               ),
