@@ -1,5 +1,7 @@
 name: snake_player_flutter
-description: A new flutter plugin project.
+description: Simple Streaming at scale.
+
+  Uiza is the complete toolkit for building a powerful video streaming application with unlimited scalability. We design Uiza so simple that you only need a few lines of codes to start streaming, but sophisticated enough for you to build complex products on top of it.
 version: 0.0.2
 homepage: https://github.com/uizaio/snake.sdk.flutter-player
 
