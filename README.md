@@ -26,6 +26,13 @@ This plugin is based on  [Chewie](https://github.com/brianegan/chewie). Chewie i
 ✔️ DRM support (token, Widevine, FairPlay EZDRM).  
 ✔️ ... and much more!
 
+![enter image description here](https://github.com/uizaio/snake.sdk.flutter-player/blob/master/pic/1.jpg?raw=true)
+![enter image description here](https://github.com/uizaio/snake.sdk.flutter-player/blob/master/pic/2.jpg?raw=true)
+![enter image description here](https://github.com/uizaio/snake.sdk.flutter-player/blob/master/pic/3.jpg?raw=true)
+![enter image description here](https://github.com/uizaio/snake.sdk.flutter-player/blob/master/pic/4.jpg?raw=true)
+![enter image description here](https://github.com/uizaio/snake.sdk.flutter-player/blob/master/pic/5.jpg?raw=true)
+![enter image description here](https://github.com/uizaio/snake.sdk.flutter-player/blob/master/pic/6.jpg?raw=true)
+![enter image description here](https://github.com/uizaio/snake.sdk.flutter-player/blob/master/pic/7.jpg?raw=true)
 
 
 ## Support
