@@ -9,6 +9,7 @@ Uiza is the complete toolkit for building a powerful video streaming application
 This plugin is based on  [Chewie](https://github.com/brianegan/chewie). Chewie is awesome plugin and works well in many cases. Better Player is a continuation of ideas introduced in Chewie. Better player fix common bugs, adds more configuration options and solves typical use cases.
 
 **Features:**
+
 ✔️ Fixed common bugs      
 ✔️ Added advanced configuration options      
 ✔️ Refactored player controls      
