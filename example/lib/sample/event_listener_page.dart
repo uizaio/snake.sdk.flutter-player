@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:better_player/better_player.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:snake_player_flutter/snake_player_flutter.dart';
 import 'package:snake_player_flutter_example/common/constant/video_constants.dart';
 
@@ -24,6 +25,7 @@ class _EventListenerPageState extends State<EventListenerPage> {
         const BetterPlayerConfiguration(
       aspectRatio: 16 / 9,
       fit: BoxFit.contain,
+      deviceOrientationsAfterFullScreen: [DeviceOrientation.portraitUp],
     );
     BetterPlayerDataSource dataSource = BetterPlayerDataSource(
       BetterPlayerDataSourceType.network,
@@ -73,7 +75,8 @@ class _EventListenerPageState extends State<EventListenerPage> {
               stream: _eventStreamController.stream,
               builder: (context, snapshot) {
                 return ListView(
-                  padding: const EdgeInsets.all(DimenConstants.marginPaddingMedium),
+                  padding:
+                      const EdgeInsets.all(DimenConstants.marginPaddingMedium),
                   children: events
                       .map(
                         (event) => Column(
