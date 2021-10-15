@@ -1,3 +1,6 @@
+## 0.0.5 (2021-10-15)
+Fixed mirror bugs
+
 ## 0.0.4 (2021-10-15)
 Fixed mirror bugs
 
