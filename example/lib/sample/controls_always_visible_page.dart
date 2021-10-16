@@ -1,5 +1,6 @@
 import 'package:better_player/better_player.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:snake_player_flutter/snake_player_flutter.dart';
 import 'package:snake_player_flutter_example/common/constant/video_constants.dart';
 
@@ -21,6 +22,7 @@ class _ControlsAlwaysVisiblePageState extends State<ControlsAlwaysVisiblePage> {
       aspectRatio: 16 / 9,
       fit: BoxFit.contain,
       handleLifecycle: true,
+      deviceOrientationsAfterFullScreen: [DeviceOrientation.portraitUp],
     );
     _betterPlayerController = BetterPlayerController(betterPlayerConfiguration);
     _setupDataSource();

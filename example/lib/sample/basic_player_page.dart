@@ -1,5 +1,6 @@
 import 'package:better_player/better_player.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:snake_player_flutter/snake_player_flutter.dart';
 import 'package:snake_player_flutter_example/common/constant/video_constants.dart';
 import 'package:snake_player_flutter_example/common/util/file_utils.dart';
@@ -12,6 +13,14 @@ class BasicPlayerPage extends StatefulWidget {
 }
 
 class _BasicPlayerPageState extends State<BasicPlayerPage> {
+  final BetterPlayerConfiguration _betterPlayerConfiguration =
+      const BetterPlayerConfiguration(
+    aspectRatio: 16 / 9,
+    fit: BoxFit.contain,
+    autoPlay: true,
+    deviceOrientationsAfterFullScreen: [DeviceOrientation.portraitUp],
+  );
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -30,6 +39,7 @@ class _BasicPlayerPageState extends State<BasicPlayerPage> {
             aspectRatio: 16 / 9,
             child: BetterPlayer.network(
               VideoConstants.forBiggerBlazesUrl,
+              betterPlayerConfiguration: _betterPlayerConfiguration,
             ),
           ),
           const Padding(
@@ -42,7 +52,10 @@ class _BasicPlayerPageState extends State<BasicPlayerPage> {
             future: FileUtils.getFileUrl(VideoConstants.fileTestVideoUrl),
             builder: (BuildContext context, AsyncSnapshot<String> snapshot) {
               if (snapshot.data != null) {
-                return BetterPlayer.file(snapshot.data!);
+                return BetterPlayer.file(
+                  snapshot.data!,
+                  betterPlayerConfiguration: _betterPlayerConfiguration,
+                );
               } else {
                 return const SizedBox();
               }

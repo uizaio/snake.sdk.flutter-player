@@ -1,5 +1,6 @@
 import 'package:better_player/better_player.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:snake_player_flutter/snake_player_flutter.dart';
 import 'package:snake_player_flutter_example/common/constant/video_constants.dart';
 
@@ -45,12 +46,14 @@ class _HlsSubtitlesPageState extends State<HlsSubtitlesPage> {
 
     BetterPlayerConfiguration betterPlayerConfiguration =
         BetterPlayerConfiguration(
-            controlsConfiguration: controlsConfiguration,
-            aspectRatio: 16 / 9,
-            fit: BoxFit.contain,
-            subtitlesConfiguration: const BetterPlayerSubtitlesConfiguration(
-              fontSize: 16.0,
-            ));
+      controlsConfiguration: controlsConfiguration,
+      aspectRatio: 16 / 9,
+      fit: BoxFit.contain,
+      subtitlesConfiguration: const BetterPlayerSubtitlesConfiguration(
+        fontSize: 16.0,
+      ),
+      deviceOrientationsAfterFullScreen: [DeviceOrientation.portraitUp],
+    );
     BetterPlayerDataSource dataSource = BetterPlayerDataSource(
         BetterPlayerDataSourceType.network, VideoConstants.hlsPlaylistUrl,
         useAsmsSubtitles: true);

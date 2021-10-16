@@ -81,10 +81,10 @@ class _ReusableVideoListWidgetState extends State<ReusableVideoListWidget> {
     }
     if (event.betterPlayerEventType == BetterPlayerEventType.initialized) {
       if (videoListData!.lastPosition != null) {
-        controller!.seekTo(videoListData!.lastPosition!);
+        controller?.seekTo(videoListData!.lastPosition!);
       }
       if (videoListData!.wasPlaying!) {
-        controller!.play();
+        controller?.play();
       }
     }
   }
@@ -163,21 +163,21 @@ class _ReusableVideoListWidgetState extends State<ReusableVideoListWidget> {
               ElevatedButton(
                 child: const Text("Play"),
                 onPressed: () {
-                  controller!.play();
+                  controller?.play();
                 },
               ),
               const SizedBox(width: 8),
               ElevatedButton(
                 child: const Text("Pause"),
                 onPressed: () {
-                  controller!.pause();
+                  controller?.pause();
                 },
               ),
               const SizedBox(width: 8),
               ElevatedButton(
                 child: const Text("Set max volume"),
                 onPressed: () {
-                  controller!.setVolume(1.0);
+                  controller?.setVolume(1.0);
                 },
               ),
             ]),

@@ -1,5 +1,6 @@
 import 'package:better_player/better_player.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:snake_player_flutter_example/common/constant/video_constants.dart';
 
 class NormalPlayerPage extends StatefulWidget {
@@ -21,6 +22,7 @@ class _NormalPlayerPageState extends State<NormalPlayerPage> {
       fit: BoxFit.contain,
       autoPlay: true,
       looping: true,
+      deviceOrientationsAfterFullScreen: [DeviceOrientation.portraitUp],
     );
     _betterPlayerDataSource = BetterPlayerDataSource(
       BetterPlayerDataSourceType.network,

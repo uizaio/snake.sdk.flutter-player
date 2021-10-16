@@ -1,5 +1,6 @@
 import 'package:better_player/better_player.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:snake_player_flutter/snake_player_flutter.dart';
 import 'package:snake_player_flutter_example/common/constant/video_constants.dart';
 
@@ -20,6 +21,7 @@ class _RotationAndFitPageState extends State<RotationAndFitPage> {
       aspectRatio: 1.0,
       fit: BoxFit.fill,
       rotation: 90,
+      deviceOrientationsAfterFullScreen: [DeviceOrientation.portraitUp],
     );
     BetterPlayerDataSource dataSource = BetterPlayerDataSource(
         BetterPlayerDataSourceType.network, VideoConstants.forBiggerBlazesUrl);

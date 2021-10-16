@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'package:better_player/better_player.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:snake_player_flutter/snake_player_flutter.dart';
 import 'package:snake_player_flutter_example/common/constant/video_constants.dart';
 import 'package:snake_player_flutter_example/common/util/file_utils.dart';
@@ -25,6 +26,7 @@ class _ClearKeyState extends State<ClearKeyPage> {
         const BetterPlayerConfiguration(
       aspectRatio: 16 / 9,
       fit: BoxFit.contain,
+      deviceOrientationsAfterFullScreen: [DeviceOrientation.portraitUp],
     );
     _clearKeyControllerFile = BetterPlayerController(betterPlayerConfiguration);
     _clearKeyControllerBroken =

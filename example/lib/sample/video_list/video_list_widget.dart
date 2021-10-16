@@ -1,5 +1,6 @@
 import 'package:better_player/better_player.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:snake_player_flutter_example/model/video_list_data.dart';
 
 class VideoListWidget extends StatefulWidget {
@@ -20,7 +21,10 @@ class _VideoListWidgetState extends State<VideoListWidget> {
   void initState() {
     super.initState();
     controller = BetterPlayerListVideoPlayerController();
-    betterPlayerConfiguration = const BetterPlayerConfiguration(autoPlay: true);
+    betterPlayerConfiguration = const BetterPlayerConfiguration(
+      autoPlay: true,
+      deviceOrientationsAfterFullScreen: [DeviceOrientation.portraitUp],
+    );
   }
 
   @override
