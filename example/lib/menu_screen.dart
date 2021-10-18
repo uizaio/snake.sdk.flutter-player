@@ -8,7 +8,6 @@ import 'package:snake_player_flutter/snake_player_flutter.dart';
 import 'package:snake_player_flutter_example/sample/advanced_player_page.dart';
 import 'package:snake_player_flutter_example/sample/auto_fullscreen_orientation_page.dart';
 import 'package:snake_player_flutter_example/sample/basic_player_page.dart';
-import 'package:snake_player_flutter_example/sample/cache_page.dart';
 import 'package:snake_player_flutter_example/sample/controller_controls_page.dart';
 import 'package:snake_player_flutter_example/sample/controls_always_visible_page.dart';
 import 'package:snake_player_flutter_example/sample/controls_configuration_page.dart';
