@@ -12,7 +12,7 @@ dependencies:
   flutter:
     sdk: flutter
 
-  better_player: ^0.0.79 #https://pub.dev/packages/better_player
+  better_player: ^0.0.81 #https://pub.dev/packages/better_player
 
 dev_dependencies:
   flutter_test:

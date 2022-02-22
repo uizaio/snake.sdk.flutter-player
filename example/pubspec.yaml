@@ -21,12 +21,15 @@ dependencies:
   #focus_detector: ^2.0.0 #https://pub.dev/packages/focus_detector
   url_launcher: ^6.0.15 #https://pub.dev/packages/url_launcher
   logger: ^1.0.0 #https://pub.dev/packages/logger
-  get: ^4.1.4 #https://pub.dev/packages/get
+  get: ^4.6.1 #https://pub.dev/packages/get
   #rxdart: ^0.27.1 #https://pub.dev/packages/rxdart
   in_app_review: ^2.0.2 #https://pub.dev/packages/in_app_review
   #package_info_plus: ^1.0.2 #https://pub.dev/packages/package_info_plus
   #path_provider: ^2.0.2 #https://pub.dev/packages/path_provider
   #http: ^0.13.3 #https://pub.dev/packages/http
+
+dependency_overrides:
+  platform: ^3.1.0
 
 dev_dependencies:
   flutter_test:
