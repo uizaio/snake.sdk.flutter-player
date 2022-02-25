@@ -13,20 +13,13 @@ dependencies:
 
 #  snake_player_flutter:
 #    path: ../
-  snake_player_flutter: ^0.0.6 #https://pub.dev/packages/snake_player_flutter
+  snake_player_flutter: ^0.0.7 #https://pub.dev/packages/snake_player_flutter
 
-  cupertino_icons: ^1.0.2
-  #connectivity_plus: ^1.0.2 #https://pub.dev/packages/connectivity_plus
-  #event_bus: ^2.0.0 #https://pub.dev/packages/event_bus
-  #focus_detector: ^2.0.0 #https://pub.dev/packages/focus_detector
-  url_launcher: ^6.0.15 #https://pub.dev/packages/url_launcher
-  logger: ^1.0.0 #https://pub.dev/packages/logger
+  cupertino_icons: ^1.0.4 #https://pub.dev/packages/cupertino_icons
+  url_launcher: ^6.0.20 #https://pub.dev/packages/url_launcher
+  logger: ^1.1.0 #https://pub.dev/packages/logger
   get: ^4.6.1 #https://pub.dev/packages/get
-  #rxdart: ^0.27.1 #https://pub.dev/packages/rxdart
-  in_app_review: ^2.0.2 #https://pub.dev/packages/in_app_review
-  #package_info_plus: ^1.0.2 #https://pub.dev/packages/package_info_plus
-  #path_provider: ^2.0.2 #https://pub.dev/packages/path_provider
-  #http: ^0.13.3 #https://pub.dev/packages/http
+  in_app_review: ^2.0.4 #https://pub.dev/packages/in_app_review
 
 dependency_overrides:
   platform: ^3.1.0
