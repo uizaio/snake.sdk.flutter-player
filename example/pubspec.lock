@@ -283,10 +283,10 @@ packages:
   snake_player_flutter:
     dependency: "direct main"
     description:
-      path: ".."
-      relative: true
-    source: path
-    version: "0.0.6"
+      name: snake_player_flutter
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.0.7"
   source_span:
     dependency: transitive
     description:
