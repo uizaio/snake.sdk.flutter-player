@@ -11,9 +11,9 @@ dependencies:
   flutter:
     sdk: flutter
 
-#  snake_player_flutter:
-#    path: ../
-  snake_player_flutter: ^0.0.6 #https://pub.dev/packages/snake_player_flutter
+  snake_player_flutter:
+    path: ../
+#  snake_player_flutter: ^0.0.6 #https://pub.dev/packages/snake_player_flutter
 
   cupertino_icons: ^1.0.4 #https://pub.dev/packages/cupertino_icons
   url_launcher: ^6.0.20 #https://pub.dev/packages/url_launcher
