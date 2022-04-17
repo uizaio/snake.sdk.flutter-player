@@ -13,6 +13,7 @@ dependencies:
     sdk: flutter
 
   better_player: ^0.0.81 #https://pub.dev/packages/better_player
+  video_stream: ^0.0.1 #https://pub.dev/packages/video_stream
 
 dev_dependencies:
   flutter_test:
