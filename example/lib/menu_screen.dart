@@ -37,6 +37,7 @@ import 'package:snake_player_flutter_example/player/sample/subtitles_page.dart';
 import 'package:snake_player_flutter_example/player/sample/tiktok/tiktok_player_page.dart';
 import 'package:snake_player_flutter_example/player/sample/video_list/video_list_page.dart';
 
+import 'broadcast/broadcast_screen.dart';
 import 'player/clearkey_page.dart';
 
 class MenuScreen extends StatefulWidget {
@@ -116,6 +117,12 @@ class _MenuScreenState extends State<MenuScreen> {
               color: Colors.black,
               fontSize: DimenConstants.txtLarge,
             ),
+          ),
+          UIUtils.getButton(
+            "BroadcastScreen",
+            () {
+              Get.to(const BroadcastScreen());
+            },
           ),
           const SizedBox(height: 100),
           const Text(
