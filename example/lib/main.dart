@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
+import 'package:video_stream/camera.dart';
 
 import 'menu_screen.dart';
 
@@ -15,6 +16,14 @@ void main() async {
   // needed if you intend to initialize in the `main` function
   WidgetsFlutterBinding.ensureInitialized();
 
+  // Fetch the available cameras before initializing the app.
+  try {
+    WidgetsFlutterBinding.ensureInitialized();
+    cameras = await availableCameras();
+  } on CameraException catch (e) {
+    logError(e.code, e.description);
+  }
+
   runApp(
     GetMaterialApp(
       enableLog: true,
@@ -28,3 +37,8 @@ void main() async {
     ),
   );
 }
+
+List<CameraDescription> cameras = [];
+
+void logError(String code, String message) =>
+    print('Error: $code\nError Message: $message');
