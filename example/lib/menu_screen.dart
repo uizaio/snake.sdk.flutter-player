@@ -110,6 +110,21 @@ class _MenuScreenState extends State<MenuScreen> {
         physics: const BouncingScrollPhysics(),
         padding: const EdgeInsets.all(DimenConstants.marginPaddingMedium),
         children: [
+          const Text(
+            "Broadcast",
+            style: TextStyle(
+              color: Colors.black,
+              fontSize: DimenConstants.txtLarge,
+            ),
+          ),
+          const SizedBox(height: 100),
+          const Text(
+            "Player",
+            style: TextStyle(
+              color: Colors.black,
+              fontSize: DimenConstants.txtLarge,
+            ),
+          ),
           UIUtils.getButton(
             "BasicPlayerPage",
             () {
@@ -278,7 +293,7 @@ class _MenuScreenState extends State<MenuScreen> {
               Get.to(const DashPage());
             },
           ),
-          const SizedBox(height: 100),
+          const SizedBox(height: 50),
           UIUtils.getButton(
             "Advanced Player",
             () {
@@ -292,6 +307,13 @@ class _MenuScreenState extends State<MenuScreen> {
             },
           ),
           const SizedBox(height: 100),
+          const Text(
+            "More",
+            style: TextStyle(
+              color: Colors.black,
+              fontSize: DimenConstants.txtLarge,
+            ),
+          ),
           UIUtils.getButton(
             "Github",
             () {
